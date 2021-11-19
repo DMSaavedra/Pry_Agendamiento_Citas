@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pry_Agendamiento_Citas", "Pry_Agendamiento_Citas\Pry_Agendamiento_Citas.csproj", "{D96C5E21-786D-4798-9198-62939EE55E32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D96C5E21-786D-4798-9198-62939EE55E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96C5E21-786D-4798-9198-62939EE55E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96C5E21-786D-4798-9198-62939EE55E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96C5E21-786D-4798-9198-62939EE55E32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9778B41-C66C-437A-A267-C93C535F2CA9}
+	EndGlobalSection
+EndGlobal
