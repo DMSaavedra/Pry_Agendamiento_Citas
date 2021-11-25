@@ -68,7 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\cita.jpg" />
+    <Content Include="imagenes\Document-white.svg" />
+    <Content Include="imagenes\Home-white.svg" />
     <Content Include="imagenes\Logo.svg" />
+    <Content Include="imagenes\Menu-toggle-gray.svg" />
+    <Content Include="imagenes\Menu-toggle-white.svg" />
     <Content Include="inicio.aspx" />
     <Content Include="js\chart.min.js" />
     <Content Include="js\feather.min.js" />
@@ -113,6 +117,15 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="woff\Inter-Black.woff2" />
+    <Content Include="woff\Inter-Bold.woff2" />
+    <Content Include="woff\Inter-ExtraBold.woff2" />
+    <Content Include="woff\Inter-ExtraLight.woff2" />
+    <Content Include="woff\Inter-Light.woff2" />
+    <Content Include="woff\Inter-Medium.woff2" />
+    <Content Include="woff\Inter-Regular.woff2" />
+    <Content Include="woff\Inter-SemiBold.woff2" />
+    <Content Include="woff\Inter-Thin.woff2" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

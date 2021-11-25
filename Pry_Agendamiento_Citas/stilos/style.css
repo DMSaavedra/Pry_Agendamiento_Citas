@@ -941,7 +941,7 @@ body {
 @font-face {
   font-family: "Inter-Black";
   font-display: swap;
-  src: url("../fonts/Inter-Black.woff") format("woff"), url("../fonts/Inter-Black.woff2") format("woff2");
+  src: url("../woff/Inter-Black.woff") format("woff"), url("../woff/Inter-Black.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -949,7 +949,7 @@ body {
 @font-face {
   font-family: "Inter-ExtraBold";
   font-display: swap;
-  src: url("../fonts/Inter-ExtraBold.woff") format("woff"), url("../fonts/Inter-ExtraBold.woff2") format("woff2");
+  src: url("../woff/Inter-ExtraBold.woff") format("woff"), url("../woff/Inter-ExtraBold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -957,7 +957,7 @@ body {
 @font-face {
   font-family: "Inter-Bold";
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.woff2") format("woff2");
+  src: url("../woff/Inter-Bold.woff") format("woff"), url("../woff/Inter-Bold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -965,7 +965,7 @@ body {
 @font-face {
   font-family: "Inter-Light";
   font-display: swap;
-  src: url("../fonts/Inter-Light.woff") format("woff"), url("../fonts/Inter-Light.woff2") format("woff2");
+  src: url("../woff/Inter-Light.woff") format("woff"), url("../woff/Inter-Light.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -973,7 +973,7 @@ body {
 @font-face {
   font-family: "Inter-ExtraLight";
   font-display: swap;
-  src: url("../fonts/Inter-ExtraLight.woff") format("woff"), url("../fonts/Inter-ExtraLight.woff2") format("woff2");
+  src: url("../woff/Inter-ExtraLight.woff") format("woff"), url("../woff/Inter-ExtraLight.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -989,7 +989,7 @@ body {
 @font-face {
   font-family: "Inter-Medium";
   font-display: swap;
-  src: url("../fonts/Inter-Medium.woff") format("woff"), url("../fonts/Inter-Medium.woff2") format("woff2");
+  src: url("../woff/Inter-Medium.woff") format("woff"), url("../woff/Inter-Medium.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -997,7 +997,7 @@ body {
 @font-face {
   font-family: "Inter-SemiBold";
   font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  src: url("../woff/Inter-SemiBold.woff") format("woff"), url("../woff/Inter-SemiBold.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -1005,7 +1005,7 @@ body {
 @font-face {
   font-family: "stylesheet";
   font-display: swap;
-  src: url("../fonts/stylesheet.woff") format("woff"), url("../fonts/stylesheet.woff2") format("woff2");
+  src: url("../stilos/stylesheet.woff") format("woff"), url("../stilos/stylesheet.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -1013,7 +1013,7 @@ body {
 @font-face {
   font-family: "Inter-Thin";
   font-display: swap;
-  src: url("../fonts/Inter-Thin.woff") format("woff"), url("../fonts/Inter-Thin.woff2") format("woff2");
+  src: url("../woff/Inter-Thin.woff") format("woff"), url("../woff/Inter-Thin.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -1033,25 +1033,25 @@ body {
 }
 
 .menu-toggle {
-  background-image: url(../img/svg/Bulk/Menu-toggle-white.svg);
+  background-image: url(../imagenes/Menu-toggle-white.svg);
   width: 24px;
   height: 24px;
 }
 
 .menu-toggle--gray {
-  background-image: url(../img/svg/Bulk/Menu-toggle-gray.svg);
+  background-image: url(../imagenes/Menu-toggle-gray.svg);
   width: 24px;
   height: 24px;
 }
 
 .home {
-  background-image: url(../img/svg/Bulk/Home-white.svg);
+  background-image: url(../imagenes/Home-white.svg);
   width: 24px;
   height: 24px;
 }
 
 .document {
-  background-image: url(../img/svg/Bulk/Document-white.svg);
+  background-image: url(../imagenes/Document-white.svg);
   width: 24px;
   height: 24px;
 }
@@ -3490,7 +3490,7 @@ label {
 }
 
 .darkmode .menu-toggle--gray {
-  background-image: url(../img/svg/Bulk/Menu-toggle-white.svg);
+  background-image: url(../imagenes/Menu-toggle-white.svg)
 }
 
 .moon-icon {

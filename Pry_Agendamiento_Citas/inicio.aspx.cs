@@ -9,9 +9,6 @@ namespace Pry_Agendamiento_Citas
 {
     public partial class inicio : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
