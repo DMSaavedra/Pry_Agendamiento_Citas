@@ -11,7 +11,7 @@ namespace Pry_Agendamiento_Citas
 {
 
 
-    public partial class login_registro
+    public partial class login
     {
 
         /// <summary>
@@ -31,6 +31,15 @@ namespace Pry_Agendamiento_Citas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_password;
+
+        /// <summary>
+        /// Control lnk_olvido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_olvido;
 
         /// <summary>
         /// Control btn_ingresar.

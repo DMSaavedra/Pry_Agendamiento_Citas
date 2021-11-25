@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Pry_Agendamiento_Citas
 {
-    public partial class login_registro : System.Web.UI.Page
+    public partial class login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

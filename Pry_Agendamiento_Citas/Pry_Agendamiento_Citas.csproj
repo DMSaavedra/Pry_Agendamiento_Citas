@@ -68,9 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\cita.jpg" />
+    <Content Include="imagenes\Logo.svg" />
     <Content Include="inicio.aspx" />
-    <Content Include="login_registro.aspx" />
+    <Content Include="js\chart.min.js" />
+    <Content Include="js\feather.min.js" />
+    <Content Include="js\script.js" />
+    <Content Include="login.aspx" />
     <Content Include="stilos\stilos.css" />
+    <Content Include="stilos\style.css" />
+    <Content Include="stilos\style.min.css" />
+    <Content Include="stilos\stylesheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,12 +88,12 @@
     <Compile Include="inicio.aspx.designer.cs">
       <DependentUpon>inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="login_registro.aspx.cs">
-      <DependentUpon>login_registro.aspx</DependentUpon>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login_registro.aspx.designer.cs">
-      <DependentUpon>login_registro.aspx</DependentUpon>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
