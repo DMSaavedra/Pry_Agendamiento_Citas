@@ -58,7 +58,7 @@
 
                         <div id="register" class="animate form">
                             <form  runat="server"> 
-                                <h1> Sign up </h1> 
+                                <h1> REGISTRARSE </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" >Your username</label>
                                     <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
