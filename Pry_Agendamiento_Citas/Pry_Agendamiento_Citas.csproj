@@ -83,6 +83,16 @@
     <Content Include="stilos\style.css" />
     <Content Include="stilos\style.min.css" />
     <Content Include="stilos\stylesheet.css" />
+    <Content Include="Template\css\style.css" />
+    <Content Include="Template\css\style.min.css" />
+    <Content Include="Template\dashboard.aspx" />
+    <Content Include="Template\fonts\demo.html" />
+    <Content Include="Template\fonts\stylesheet.css" />
+    <Content Include="Template\img\avatar-illustrated-02.png" />
+    <Content Include="Template\img\avatar-illustrated-03.png" />
+    <Content Include="Template\js\script.js" />
+    <Content Include="Template\plugins\chart.min.js" />
+    <Content Include="Template\plugins\feather.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,9 +118,27 @@
     <Compile Include="Registrar.aspx.designer.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Template\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Template\css\style.min.css.map" />
+    <Content Include="Template\fonts\Inter-Black.woff2" />
+    <Content Include="Template\fonts\Inter-Bold.woff2" />
+    <Content Include="Template\fonts\Inter-ExtraBold.woff2" />
+    <Content Include="Template\fonts\Inter-ExtraLight.woff2" />
+    <Content Include="Template\fonts\Inter-Light.woff2" />
+    <Content Include="Template\fonts\Inter-Medium.woff2" />
+    <Content Include="Template\fonts\Inter-Regular.woff2" />
+    <Content Include="Template\fonts\Inter-SemiBold.woff2" />
+    <Content Include="Template\fonts\Inter-Thin.woff2" />
+    <Content Include="Template\plugins\feather.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
