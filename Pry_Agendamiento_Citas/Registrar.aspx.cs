@@ -13,5 +13,10 @@ namespace Pry_Agendamiento_Citas
         {
 
         }
+
+        protected void lnk_Cancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/login.aspx");
+        }
     }
 }
