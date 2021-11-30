@@ -18,27 +18,26 @@
     <div class="layer"></div>
     <main class="page-center">
         <article class="sign-up">
-            <h1 class="sign-up__title">AGENDAMIENTO DE CITAS BIENVENIDO</h1>
-            <center>
-                <p class="sign-up__subtitle">Ingreso de usuario</p>
-            </center>
-            <form id="form1" runat="server">
+            <h1 class="sign-up__title">Agendamiento de Citas</h1>
+            <p class="sign-up__subtitle">Ingrese sus Credenciales</p>
+            <form id="form1" runat="server" class="sign-up-form form">
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <label class="form-label-wrapper">
-                            <p class="form-label">USUARIO</p>
+                            <p class="form-label">Usuario</p>
                             <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese su usuario" runat="server"></asp:TextBox>
                         </label>
                         <label class="form-label-wrapper">
                             <p class="form-label">Contraseña</p>
-                            <asp:TextBox ID="txt_password" class="form-input" placeholder="Ingrese su contraseña" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_password" type="password" class="form-input" placeholder="Ingrese su contraseña" runat="server"></asp:TextBox>
                         </label>
                         <asp:LinkButton ID="lnk_olvido" class="link-info forget-link" runat="server">Olvido su Contraseña?</asp:LinkButton>
                         <br />
                         <asp:LinkButton ID="lnk_Registro" runat="server" class="link-info" OnClick="lnk_Registro_Click">Registrarse</asp:LinkButton>
-                        <br /><br />
-                        <asp:Button ID="btn_ingresar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Ingresar" OnClick="btn_ingresar_Click"/>
+                        <br />
+                        <br />
+                        <asp:Button ID="btn_ingresar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Ingresar" OnClick="btn_ingresar_Click" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </form>

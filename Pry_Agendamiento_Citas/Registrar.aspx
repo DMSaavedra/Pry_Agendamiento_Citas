@@ -20,7 +20,7 @@
         <article class="sign-up">
             <h1 class="sign-up__title">REGISTRO USUARIOS</h1>
             <p class="sign-up__subtitle">Si no posee de un usuario, registrese aqui!.</p>
-            <form runat="server">
+            <form runat="server" class="sign-up-form form">
                 <label class="form-label-wrapper">
                     <p class="form-label">Nombre y Apellido</p>
                     <asp:TextBox ID="txt_nombapell" class="form-input" placeholder="Ingrese su nombre y apellido" runat="server"></asp:TextBox>
@@ -29,9 +29,13 @@
                     <p class="form-label">Cédula</p>
                     <asp:TextBox ID="txt_ced" class="form-input" placeholder="Ingrese su cédula" runat="server"></asp:TextBox>
                 </label>
-                <label class="form-label-wrapper">
+                <%--<label class="form-label-wrapper">
                     <p class="form-label">Teléfono</p>
                     <asp:TextBox ID="txt_tel" class="form-input" placeholder="Ingrese su teléfono" runat="server"></asp:TextBox>
+                </label>--%>
+                <label class="form-label-wrapper">
+                    <p class="form-label">Correo</p>
+                    <asp:TextBox ID="txt_correo" class="form-input" placeholder="Ingrese su correo" runat="server"></asp:TextBox>
                 </label>
                 <label class="form-label-wrapper">
                     <p class="form-label">Usuario</p>
