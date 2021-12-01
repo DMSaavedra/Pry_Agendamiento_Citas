@@ -5,18 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Pry_Agendamiento_Citas
+namespace Pry_Agendamiento_Citas.Template
 {
-    public partial class Registrar : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void lnk_Cancelar_Click(object sender, EventArgs e)
+        protected void btnSalir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/login.aspx");
+            Response.Redirect("~/Login.aspx");
         }
     }
 }

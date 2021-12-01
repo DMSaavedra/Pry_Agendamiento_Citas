@@ -13,5 +13,15 @@ namespace Pry_Agendamiento_Citas
         {
 
         }
+
+        protected void lnk_Registro_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Registrar.aspx");
+        }
+
+        protected void btn_ingresar_Click(object sender, EventArgs e)
+        {
+            //Response.Redirect("~/Doctores.aspx");
+        }
     }
 }
