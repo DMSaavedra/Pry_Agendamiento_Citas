@@ -78,6 +78,7 @@
     <Content Include="js\feather.min.js" />
     <Content Include="js\script.js" />
     <Content Include="login.aspx" />
+    <Content Include="Paciente.aspx" />
     <Content Include="Registrar.aspx" />
     <Content Include="stilos\stilos.css" />
     <Content Include="stilos\style.css" />
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente.aspx.cs">
+      <DependentUpon>Paciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paciente.aspx.designer.cs">
+      <DependentUpon>Paciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrar.aspx.cs">
