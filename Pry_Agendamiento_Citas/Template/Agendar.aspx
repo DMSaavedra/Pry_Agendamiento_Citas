@@ -12,6 +12,7 @@
                 <label for="validationCustom01">
                     Fecha del Turno<span
                         class="m-0 font-weight-bold text-danger">*</span></label>
+
                 <input type="date" id="txtFechaReg" name="txtFechaReg" class="form-control form-control-sm"
                     >
             </div>
@@ -48,6 +49,7 @@
                 <input type="time" name="" id="" class="form-control form-control-sm">
             </div>
         </div>
+        <br>
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cph_mensaje" runat="server">

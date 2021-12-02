@@ -110,6 +110,8 @@
     <Content Include="Template\js\lumino.glyphs.js" />
     <Content Include="Template\js\npm.js" />
     <Content Include="Template\js\respond.min.js" />
+    <Content Include="Template\NewDoctor.aspx" />
+    <Content Include="Template\NewEspecialidad.aspx" />
     <Content Include="Template\Pacientes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -142,6 +144,20 @@
     </Compile>
     <Compile Include="Template\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\NewDoctor.aspx.cs">
+      <DependentUpon>NewDoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\NewDoctor.aspx.designer.cs">
+      <DependentUpon>NewDoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\NewEspecialidad.aspx.cs">
+      <DependentUpon>NewEspecialidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\NewEspecialidad.aspx.designer.cs">
+      <DependentUpon>NewEspecialidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Pacientes.aspx.cs">
       <DependentUpon>Pacientes.aspx</DependentUpon>

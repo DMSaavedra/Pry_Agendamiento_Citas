@@ -33,5 +33,15 @@ namespace Pry_Agendamiento_Citas.Template
         {
             Response.Redirect("Inicio.aspx");
         }
+
+        protected void lnk_New_Doctor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewDoctor.aspx");
+        }
+
+        protected void lnk_New_Especialidad_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewEspecialidad.aspx");
+        }
     }
 }

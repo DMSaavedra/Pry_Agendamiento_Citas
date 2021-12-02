@@ -61,7 +61,7 @@
                         </td>
                     </tr>
                 </table>--%>
-                    <div class="profile-usertitle-name">Diego Saavedra</div>
+                    <div class="profile-usertitle-name">Lenin Mosquera</div>
                     <div class="profile-usertitle-status">Doctor</div>
                 </div>
                 <div class="clear"></div>
@@ -93,9 +93,8 @@
                             href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
                     </a>
                     <ul class="children collapse" id="sub-item-2">
-                        <li><a class="" href="#">
-                            <span class="fa fa-arrow-right">&nbsp;</span> Nueva Especialidad
-                        </a>
+                        <li>
+                            <asp:LinkButton ID="lnk_New_Especialidad" runat="server" OnClick="lnk_New_Especialidad_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Especialidad</asp:LinkButton>
                         </li>
                         <li><a class="" href="#">
                             <span class="fa fa-arrow-right">&nbsp;</span> Listado Especialidades
@@ -111,9 +110,8 @@
                             class="icon pull-right"><em class="fa fa-plus"></em></span>
                     </a>
                     <ul class="children collapse" id="sub-item-3">
-                        <li><a class="" href="#">
-                            <span class="fa fa-arrow-right">&nbsp;</span> Nuevo Doctor
-                        </a>
+                        <li>
+                            <asp:LinkButton ID="lnk_New_Doctor" runat="server" OnClick="lnk_New_Doctor_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Doctor</asp:LinkButton>
                         </li>
                         <li><a class="" href="#">
                             <span class="fa fa-arrow-right">&nbsp;</span> Listado Doctores
@@ -123,7 +121,7 @@
                     </ul>
                 </li>
 
-                <li><a href="widgets.html"><em class="fas fa-book-medical">&nbsp;</em> Historiales Clinicos</a></li>
+                <li><a href="#"><em class="fas fa-book-medical">&nbsp;</em> Historiales Clinicos</a></li>
                 <li><asp:LinkButton ID="lnk_Agendamiento" runat="server" OnClick="lnk_Agendamiento_Click"><em class="far fa-calendar-alt">&nbsp;</em> Agendamiento</asp:LinkButton></li>
 
                 <li><a href="widgets.html"><em class="fas fa-file-medical-alt">&nbsp;</em> Citas Medicas Agendadas</a></li>
