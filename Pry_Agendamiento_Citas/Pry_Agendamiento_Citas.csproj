@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Agendar.aspx" />
     <Content Include="imagenes\cita.jpg" />
     <Content Include="imagenes\Document-white.svg" />
     <Content Include="imagenes\Home-white.svg" />
@@ -78,12 +77,12 @@
     <Content Include="js\feather.min.js" />
     <Content Include="js\script.js" />
     <Content Include="login.aspx" />
-    <Content Include="Paciente.aspx" />
     <Content Include="Registrar.aspx" />
     <Content Include="stilos\stilos.css" />
     <Content Include="stilos\style.css" />
     <Content Include="stilos\style.min.css" />
     <Content Include="stilos\stylesheet.css" />
+    <Content Include="Template\Agendar.aspx" />
     <Content Include="Template\css\bootstrap-table.css" />
     <Content Include="Template\css\bootstrap-theme.css" />
     <Content Include="Template\css\bootstrap-theme.min.css" />
@@ -93,11 +92,11 @@
     <Content Include="Template\css\datepicker3.css" />
     <Content Include="Template\css\font-awesome.min.css" />
     <Content Include="Template\css\styles.css" />
-    <Content Include="Template\Doctores.aspx" />
     <Content Include="Template\fonts\fontawesome-webfont.svg" />
     <Content Include="Template\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Template\img\avatar-illustrated-02.png" />
     <Content Include="Template\img\avatar-illustrated-03.png" />
+    <Content Include="Template\Inicio.aspx" />
     <Content Include="Template\js\bootstrap-datepicker.js" />
     <Content Include="Template\js\bootstrap.js" />
     <Content Include="Template\js\bootstrap.min.js" />
@@ -111,29 +110,16 @@
     <Content Include="Template\js\lumino.glyphs.js" />
     <Content Include="Template\js\npm.js" />
     <Content Include="Template\js\respond.min.js" />
+    <Content Include="Template\Pacientes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agendar.aspx.cs">
-      <DependentUpon>Agendar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Agendar.aspx.designer.cs">
-      <DependentUpon>Agendar.aspx</DependentUpon>
-    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Paciente.aspx.cs">
-      <DependentUpon>Paciente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paciente.aspx.designer.cs">
-      <DependentUpon>Paciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrar.aspx.cs">
@@ -143,12 +129,26 @@
     <Compile Include="Registrar.aspx.designer.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Doctores.aspx.cs">
-      <DependentUpon>Doctores.aspx</DependentUpon>
+    <Compile Include="Template\Agendar.aspx.cs">
+      <DependentUpon>Agendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Doctores.aspx.designer.cs">
-      <DependentUpon>Doctores.aspx</DependentUpon>
+    <Compile Include="Template\Agendar.aspx.designer.cs">
+      <DependentUpon>Agendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Pacientes.aspx.cs">
+      <DependentUpon>Pacientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Pacientes.aspx.designer.cs">
+      <DependentUpon>Pacientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

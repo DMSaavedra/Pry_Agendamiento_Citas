@@ -42,13 +42,40 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Button btnSalir;
 
         /// <summary>
-        /// Control cph_mensaje.
+        /// Control lnk_Inicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_mensaje;
+        protected global::System.Web.UI.WebControls.LinkButton lnk_Inicio;
+
+        /// <summary>
+        /// Control lnk_New_Paciente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_New_Paciente;
+
+        /// <summary>
+        /// Control lnk_Agendamiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_Agendamiento;
+
+        /// <summary>
+        /// Control cph_titulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_titulo;
 
         /// <summary>
         /// Control cph_contenido.
@@ -58,5 +85,14 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_contenido;
+
+        /// <summary>
+        /// Control cph_mensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cph_mensaje;
     }
 }

@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Pry_Agendamiento_Citas
+namespace Pry_Agendamiento_Citas.Template
 {
 
 
-    public partial class Paciente
+    public partial class Pacientes
     {
     }
 }

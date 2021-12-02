@@ -18,5 +18,20 @@ namespace Pry_Agendamiento_Citas.Template
         {
             Response.Redirect("~/Login.aspx");
         }
+
+        protected void lnk_Agendamiento_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Agendar.aspx");
+        }
+
+        protected void lnk_New_Paciente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Pacientes.aspx");
+        }
+
+        protected void lnk_Inicio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Inicio.aspx");
+        }
     }
 }
