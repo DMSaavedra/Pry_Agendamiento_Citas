@@ -21,7 +21,7 @@ namespace Pry_Agendamiento_Citas
 
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("~/Doctores.aspx");
+            Response.Redirect("~/Template/Inicio.aspx");
         }
     }
 }

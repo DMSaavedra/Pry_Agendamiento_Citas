@@ -43,5 +43,10 @@ namespace Pry_Agendamiento_Citas.Template
         {
             Response.Redirect("NewEspecialidad.aspx");
         }
+
+        protected void lnk_cardiologia_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

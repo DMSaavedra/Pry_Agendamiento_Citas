@@ -78,6 +78,42 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_New_Doctor;
 
         /// <summary>
+        /// Control lnk_mgeneral.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_mgeneral;
+
+        /// <summary>
+        /// Control lnk_mfamiliar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_mfamiliar;
+
+        /// <summary>
+        /// Control lnk_cardiologia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_cardiologia;
+
+        /// <summary>
+        /// Control lnk_dermatologia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_dermatologia;
+
+        /// <summary>
         /// Control lnk_Agendamiento.
         /// </summary>
         /// <remarks>
