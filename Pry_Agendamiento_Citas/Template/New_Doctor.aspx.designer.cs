@@ -11,7 +11,7 @@ namespace Pry_Agendamiento_Citas.Template
 {
 
 
-    public partial class InicioPrb
+    public partial class New_Doctor
     {
     }
 }

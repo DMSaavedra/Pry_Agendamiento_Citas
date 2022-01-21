@@ -14,6 +14,15 @@
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Jquery 3.3.1-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
     <asp:ContentPlaceHolder ID="cph_cabecera" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -30,8 +39,7 @@
                     </button>
                     <a class="navbar-brand" href="#"><span>Agendamiento de</span> Citas Medicas</a>
                     <ul class="nav navbar-top-links navbar-right">
-                        <li class="dropdown">
-                        </li>
+                        <li class="dropdown"></li>
                     </ul>
                 </div>
             </div>
@@ -53,21 +61,22 @@
                 <div class="clear"></div>
             </div>
             <div class="divider"></div>
+            <ul class="nav menu">
+                <li class="active">
+                    <asp:LinkButton ID="lnk_Inicio" runat="server" OnClick="lnk_Inicio_Click"><i class="fas fa-tachometer-alt"></i>&nbsp; Dashboard</asp:LinkButton>
+                </li>
+            </ul>
 
-            <asp:Panel ID="Panel1" runat="server">
+            <asp:Panel ID="Panel1" Visible="true" runat="server">
                 <ul class="nav menu">
-                    <li class="active">
-                        <asp:LinkButton ID="lnk_Inicio" runat="server" OnClick="lnk_Inicio_Click"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</asp:LinkButton>
-                    </li>
-
                     <li class="parent ">
                         <a data-toggle="collapse" href="#sub-item-1">
-                            <em class="fas fa-user-injured">&nbsp;</em> Pacientes <span data-toggle="collapse"
-                                href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                            <i class="fas fa-user-injured"></i>&nbsp; Pacientes <span data-toggle="collapse" href="#sub-item-1"
+                                class="icon pull-right"><em class="fa fa-plus"></em></span>
                         </a>
                         <ul class="children collapse" id="sub-item-1">
                             <li>
-                                <asp:LinkButton ID="lnk_New_Paciente" runat="server" OnClick="lnk_New_Paciente_Click"><span class="fas fa-user-plus">&nbsp;</span>Nuevo Paciente</asp:LinkButton>
+                                <asp:LinkButton ID="lnk_New_Paciente" runat="server" OnClick="lnk_New_Paciente_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Paciente</asp:LinkButton>
                             </li>
                             <li><a class="" href="#">
                                 <span class="fa fa-arrow-right">&nbsp;</span> Listado Pacientes
@@ -76,9 +85,26 @@
                         </ul>
                     </li>
 
+
+                    <li class="parent ">
+                        <a data-toggle="collapse" href="#sub-item-3">
+                            <i class="fas fa-user-md"></i>&nbsp; Doctores <span data-toggle="collapse" href="#sub-item-3"
+                                class="icon pull-right"><em class="fa fa-plus"></em></span>
+                        </a>
+                        <ul class="children collapse" id="sub-item-3">
+                            <li>
+                                <asp:LinkButton ID="lnk_New_Doctor" runat="server" OnClick="lnk_New_Doctor_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Doctor</asp:LinkButton>
+                            </li>
+                            <li><a class="" href="#">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Listado Doctores
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="parent ">
                         <a data-toggle="collapse" href="#sub-item-2">
-                            <em class="fas fa-hospital-user">&nbsp;</em> Especialidades <span data-toggle="collapse"
+                            <i class="fas fa-stethoscope"></i>&nbsp; Especialidades <span data-toggle="collapse"
                                 href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
                         </a>
                         <ul class="children collapse" id="sub-item-2">
@@ -94,65 +120,67 @@
                     </li>
 
                     <li class="parent ">
-                        <a data-toggle="collapse" href="#sub-item-3">
-                            <em class="fas fa-user-md">&nbsp;</em> Doctores <span data-toggle="collapse" href="#sub-item-3"
-                                class="icon pull-right"><em class="fa fa-plus"></em></span>
-                        </a>
-                        <ul class="children collapse" id="sub-item-3">
-                            <li>
-                                <asp:LinkButton ID="lnk_New_Doctor" runat="server" OnClick="lnk_New_Doctor_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Doctor</asp:LinkButton>
-                            </li>
-                            <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Listado Doctores
-                            </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="parent ">
                         <a data-toggle="collapse" href="#sub-item-4">
-                            <em class="far fa-calendar-alt">&nbsp;</em> Agendamiento <span data-toggle="collapse" href="#sub-item-4"
-                                class="icon pull-right"><em class="fa fa-plus"></em></span>
+                            <i class="far fa-calendar-alt"></i>&nbsp; Agendamiento <span data-toggle="collapse"
+                                href="#sub-item-4" class="icon pull-right"><em class="fa fa-plus"></em></span>
                         </a>
                         <ul class="children collapse" id="sub-item-4">
                             <li>
                                 <asp:LinkButton ID="lnk_agendamiento" runat="server" OnClick="lnk_agendamiento_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Cita</asp:LinkButton>
                             </li>
-                            <li class="parent ">
-                                <a data-toggle="collapse" href="#sub-item-5">
-                                    <em class="fas fa-file-medical-alt">&nbsp;</em> Citas Agendadas <span data-toggle="collapse" href="#sub-item-5"
-                                        class="icon pull-right"><em class="fa fa-plus"></em></span>
-                                </a>
+                            <li><a class="" href="#">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Citas Agendadas
+                            </a>
                             </li>
-                            <ul class="children collapse" id="sub-item-5">
-                                <li>
-                                    <asp:LinkButton ID="lnk_mgeneral" runat="server" OnClick="lnk_mgeneral_Click"><span class="fa fa-arrow-right">&nbsp;</span> Medicina General</asp:LinkButton>
-                                </li>
-                                <li>
-                                    <asp:LinkButton ID="lnk_mfamiliar" runat="server" OnClick="lnk_mfamiliar_Click"><span class="fa fa-arrow-right">&nbsp;</span> Medicina Familiar</asp:LinkButton>
-                                </li>
-                                <li>
-                                    <asp:LinkButton ID="lnk_cardiologia" runat="server" OnClick="lnk_cardiologia_Click"><span class="fa fa-arrow-right">&nbsp;</span> Cardiología</asp:LinkButton>
-                                </li>
-                                <li>
-                                    <asp:LinkButton ID="lnk_dermatologia" runat="server" OnClick="lnk_dermatologia_Click"><span class="fa fa-arrow-right">&nbsp;</span>Dermatología</asp:LinkButton>
-                                </li>
-                            </ul>
+
+                        </ul>
+                    </li>
+
+                    <li class="parent ">
+                        <a data-toggle="collapse" href="#sub-item-6">
+                            <i class="fas fa-home"></i>&nbsp; Consultorios <span data-toggle="collapse"
+                                href="#sub-item-6" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                        </a>
+                        <ul class="children collapse" id="sub-item-6">
+                            <li>
+                                <asp:LinkButton ID="lnk_consultorio" runat="server" OnClick="lnk_consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Consultorio</asp:LinkButton>
+                            </li>
+                            <li><a class="" href="#">
+                                <span class="fa fa-arrow-right">&nbsp;</span> Listado de Consultorios
+                            </a>
+                            </li>
 
                         </ul>
                     </li>
                 </ul>
             </asp:Panel>
-            <asp:Panel ID="Panel2" Visible="false" runat="server">
+            <asp:Panel ID="Panel2" Visible="true" runat="server">
                 <ul class="nav menu">
-                    <li class="active">
-                        <asp:LinkButton ID="lnk_Productos_Usu" runat="server"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</asp:LinkButton>
+                    <li class="parent ">
+                        <a data-toggle="collapse" href="#sub-item-5">
+                            <i class="far fa-calendar-alt"></i>&nbsp; Agendamiento <span data-toggle="collapse"
+                                href="#sub-item-5" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                        </a>
+                        <ul class="children collapse" id="sub-item-5">
+                            <li>
+                                <asp:LinkButton ID="lnk_Agendamiento_Doc" runat="server" OnClick="lnk_Agendamiento_Doc_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Cita</asp:LinkButton>
+                            </li>
+                            <li>
+                                <a class="" href="#">
+                                    <span class="fa fa-arrow-right">&nbsp;</span> Citas Agendadas
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
-                    s
-                    <li><a href="index.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
-                    <li><a href="index.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
                 </ul>
             </asp:Panel>
+            <ul class="nav menu">
+                <li>
+                    <asp:LinkButton ID="lnk_historial_med" runat="server"><i class="fas fa-notes-medical"></i>&nbsp; Historial Medico</asp:LinkButton>
+                </li>
+            </ul>
+
         </div>
         <!--/.sidebar-->
         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -197,6 +225,7 @@
         </div>
 
         <!--/.main-->
+
 
 
         <script src="Assets/js/jquery-1.11.1.min.js"></script>

@@ -1,11 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="NewDoctor.aspx.cs" Inherits="Pry_Agendamiento_Citas.Template.NewDoctor" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Page.Master" AutoEventWireup="true" CodeBehind="New_Doctor.aspx.cs" Inherits="Pry_Agendamiento_Citas.Template.New_Doctor" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cph_cabecera" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cph_titulo" runat="server">
-    <h1 class="page-header">Registro Doctores</h1>
+<asp:Content ID="Content2" ContentPlaceHolderID="cph_nom_user" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="cph_header" runat="server">
+    Doctores
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cph_titulo" runat="server">
+    Creacion de Nuevo Doctor
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cph_mensaje" runat="server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="cph_contenido" runat="server">
     <div class="container-fluid">
         <div class="form row">
             <div class="col-md-4 mb-3">
@@ -17,8 +23,8 @@
                     class="form-control form-control-sm" />
             </div>
             <div class="col-md-2 mb-3">
-                <label for="validationCustom01">Fecha de Nacimiento<span class="m-0 font-weight-bold text-danger">*</span></label>
-                <input type="date" id="txtFNac" name="txtFNac" class="form-control form-control-sm">
+                <label for="validationCustom01">Edad<span class="m-0 font-weight-bold text-danger">*</span></label>
+                <input type="text" id="txtEdad" name="txtEdad" class="form-control form-control-sm" />
             </div>
             <div class="col-md-2 mb-3">
                 <label for="validationCustom01">Cedula/RUC</label>
@@ -43,6 +49,16 @@
         </div>
         <br>
         <div class="form row">
+             <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Grupo Sanguineo</label>
+                <select name="slcTpSangre" id="slcTpSangre" class="form-control">
+                    <option value="0" selected>Seleccione</option>
+                    <option value="1">O+</option>
+                    <option value="2">O-</option>
+                    <option value="3">AB+</option>
+                    <option value="4">AB-</option>
+                </select>
+            </div>
             <div class="col-md-4 mb-3">
                 <label for="validationCustom01">
                     Especialidad<span
@@ -62,14 +78,5 @@
             </div>
         </div>
         <br>
-        <div class="form row">
-            <div class="col-md-4 mb-3">
-                <label>Imagen</label>
-                <asp:FileUpload ID="FileUpload1" runat="server" class="form-control form-control-sm"/>
-            </div>
-        </div>
-        <br />
     </div>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cph_mensaje" runat="server">
 </asp:Content>

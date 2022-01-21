@@ -82,7 +82,6 @@
     <Content Include="stilos\style.css" />
     <Content Include="stilos\style.min.css" />
     <Content Include="stilos\stylesheet.css" />
-    <Content Include="Template\Agendar.aspx" />
     <Content Include="Template\Assets\css\bootstrap-table.css" />
     <Content Include="Template\Assets\css\bootstrap-theme.css" />
     <Content Include="Template\Assets\css\bootstrap-theme.min.css" />
@@ -121,12 +120,11 @@
     <Content Include="Template\css\datepicker3.css" />
     <Content Include="Template\css\font-awesome.min.css" />
     <Content Include="Template\css\styles.css" />
+    <Content Include="Template\Dashboard.aspx" />
     <Content Include="Template\fonts\fontawesome-webfont.svg" />
     <Content Include="Template\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Template\img\avatar-illustrated-02.png" />
     <Content Include="Template\img\avatar-illustrated-03.png" />
-    <Content Include="Template\Inicio.aspx" />
-    <Content Include="Template\InicioPrb.aspx" />
     <Content Include="Template\js\bootstrap-datepicker.js" />
     <Content Include="Template\js\bootstrap.js" />
     <Content Include="Template\js\bootstrap.min.js" />
@@ -140,9 +138,11 @@
     <Content Include="Template\js\lumino.glyphs.js" />
     <Content Include="Template\js\npm.js" />
     <Content Include="Template\js\respond.min.js" />
-    <Content Include="Template\NewDoctor.aspx" />
-    <Content Include="Template\NewEspecialidad.aspx" />
-    <Content Include="Template\Pacientes.aspx" />
+    <Content Include="Template\New_Agendamiento.aspx" />
+    <Content Include="Template\New_Consultorio.aspx" />
+    <Content Include="Template\New_Doctor.aspx" />
+    <Content Include="Template\New_Especialidad.aspx" />
+    <Content Include="Template\New_Paciente.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -161,47 +161,47 @@
     <Compile Include="Registrar.aspx.designer.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Agendar.aspx.cs">
-      <DependentUpon>Agendar.aspx</DependentUpon>
+    <Compile Include="Template\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Agendar.aspx.designer.cs">
-      <DependentUpon>Agendar.aspx</DependentUpon>
+    <Compile Include="Template\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Inicio.aspx.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="Template\New_Agendamiento.aspx.cs">
+      <DependentUpon>New_Agendamiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Inicio.aspx.designer.cs">
-      <DependentUpon>Inicio.aspx</DependentUpon>
+    <Compile Include="Template\New_Agendamiento.aspx.designer.cs">
+      <DependentUpon>New_Agendamiento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\InicioPrb.aspx.cs">
-      <DependentUpon>InicioPrb.aspx</DependentUpon>
+    <Compile Include="Template\New_Consultorio.aspx.cs">
+      <DependentUpon>New_Consultorio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\InicioPrb.aspx.designer.cs">
-      <DependentUpon>InicioPrb.aspx</DependentUpon>
+    <Compile Include="Template\New_Consultorio.aspx.designer.cs">
+      <DependentUpon>New_Consultorio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\NewDoctor.aspx.cs">
-      <DependentUpon>NewDoctor.aspx</DependentUpon>
+    <Compile Include="Template\New_Doctor.aspx.cs">
+      <DependentUpon>New_Doctor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\NewDoctor.aspx.designer.cs">
-      <DependentUpon>NewDoctor.aspx</DependentUpon>
+    <Compile Include="Template\New_Doctor.aspx.designer.cs">
+      <DependentUpon>New_Doctor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\NewEspecialidad.aspx.cs">
-      <DependentUpon>NewEspecialidad.aspx</DependentUpon>
+    <Compile Include="Template\New_Especialidad.aspx.cs">
+      <DependentUpon>New_Especialidad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\NewEspecialidad.aspx.designer.cs">
-      <DependentUpon>NewEspecialidad.aspx</DependentUpon>
+    <Compile Include="Template\New_Especialidad.aspx.designer.cs">
+      <DependentUpon>New_Especialidad.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Pacientes.aspx.cs">
-      <DependentUpon>Pacientes.aspx</DependentUpon>
+    <Compile Include="Template\New_Paciente.aspx.cs">
+      <DependentUpon>New_Paciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Pacientes.aspx.designer.cs">
-      <DependentUpon>Pacientes.aspx</DependentUpon>
+    <Compile Include="Template\New_Paciente.aspx.designer.cs">
+      <DependentUpon>New_Paciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Page.Master.cs">
       <DependentUpon>Page.Master</DependentUpon>
@@ -209,13 +209,6 @@
     </Compile>
     <Compile Include="Template\Page.Master.designer.cs">
       <DependentUpon>Page.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Template\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Template\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -233,7 +226,6 @@
     <Content Include="Template\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Template\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Template\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Template\Site1.Master" />
     <Content Include="Template\Page.Master" />
     <Content Include="Template\Assets\css\bootstrap-theme.css.map" />
     <Content Include="Template\Assets\css\bootstrap-theme.min.css.map" />

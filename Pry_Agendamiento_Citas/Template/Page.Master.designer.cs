@@ -51,15 +51,6 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Button btn_Cerrar_Session;
 
         /// <summary>
-        /// Control Panel1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-
-        /// <summary>
         /// Control lnk_Inicio.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnk_Inicio;
+
+        /// <summary>
+        /// Control Panel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
         /// Control lnk_New_Paciente.
@@ -78,15 +78,6 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_New_Paciente;
 
         /// <summary>
-        /// Control lnk_New_Especialidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_New_Especialidad;
-
-        /// <summary>
         /// Control lnk_New_Doctor.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnk_New_Doctor;
+
+        /// <summary>
+        /// Control lnk_New_Especialidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_New_Especialidad;
 
         /// <summary>
         /// Control lnk_agendamiento.
@@ -105,40 +105,13 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_agendamiento;
 
         /// <summary>
-        /// Control lnk_mgeneral.
+        /// Control lnk_consultorio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_mgeneral;
-
-        /// <summary>
-        /// Control lnk_mfamiliar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_mfamiliar;
-
-        /// <summary>
-        /// Control lnk_cardiologia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_cardiologia;
-
-        /// <summary>
-        /// Control lnk_dermatologia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_dermatologia;
+        protected global::System.Web.UI.WebControls.LinkButton lnk_consultorio;
 
         /// <summary>
         /// Control Panel2.
@@ -150,13 +123,22 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Panel Panel2;
 
         /// <summary>
-        /// Control lnk_Productos_Usu.
+        /// Control lnk_Agendamiento_Doc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_Productos_Usu;
+        protected global::System.Web.UI.WebControls.LinkButton lnk_Agendamiento_Doc;
+
+        /// <summary>
+        /// Control lnk_historial_med.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_historial_med;
 
         /// <summary>
         /// Control cph_header.

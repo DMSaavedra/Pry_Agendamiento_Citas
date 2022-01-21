@@ -1,12 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Site1.Master" AutoEventWireup="true" CodeBehind="Agendar.aspx.cs" Inherits="Pry_Agendamiento_Citas.Template.Agendar" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Page.Master" AutoEventWireup="true" CodeBehind="New_Agendamiento.aspx.cs" Inherits="Pry_Agendamiento_Citas.Template.New_Agendamiento" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cph_cabecera" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cph_titulo" runat="server">
-    <h1 class="page-header">Agendamiento Turnos</h1>
+<asp:Content ID="Content2" ContentPlaceHolderID="cph_nom_user" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
-    <div class="container-fluid">
+<asp:Content ID="Content3" ContentPlaceHolderID="cph_header" runat="server">
+    Agendamiento
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cph_titulo" runat="server">
+    Nuevo Agendamiento de Cita Medica
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cph_mensaje" runat="server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="cph_contenido" runat="server">
+     <div class="container-fluid">
         <div class="form row">
             <div class="col-md-6 mb-3">
                 <label for="validationCustom01">
@@ -52,6 +58,4 @@
         <asp:Button ID="btn_enviar" runat="server" Text="Enviar Cita" />
         <br>
     </div>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cph_mensaje" runat="server">
 </asp:Content>

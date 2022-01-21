@@ -14,54 +14,44 @@ namespace Pry_Agendamiento_Citas.Template
 
         }
 
-        protected void btn_Cerrar_Session_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void lnk_Inicio_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Template/Dashboard.aspx");
         }
 
         protected void lnk_New_Paciente_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void lnk_New_Especialidad_Click(object sender, EventArgs e)
-        {
-
+            Response.Redirect("~/Template/New_Paciente.aspx");
         }
 
         protected void lnk_New_Doctor_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/Template/New_Doctor.aspx");
+        }
 
+        protected void lnk_New_Especialidad_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/New_Especialidad.aspx");
         }
 
         protected void lnk_agendamiento_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Template/New_Agendamiento.aspx");
         }
 
-        protected void lnk_mgeneral_Click(object sender, EventArgs e)
+        protected void lnk_Agendamiento_Doc_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Template/New_Agendamiento.aspx");
         }
 
-        protected void lnk_mfamiliar_Click(object sender, EventArgs e)
+        protected void btn_Cerrar_Session_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/login.aspx");
         }
 
-        protected void lnk_cardiologia_Click(object sender, EventArgs e)
+        protected void lnk_consultorio_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void lnk_dermatologia_Click(object sender, EventArgs e)
-        {
-
+            Response.Redirect("~/Template/New_Consultorio.aspx");
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Pry_Agendamiento_Citas.Template
 {
-    public partial class NewDoctor : System.Web.UI.Page
+    public partial class New_Paciente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
