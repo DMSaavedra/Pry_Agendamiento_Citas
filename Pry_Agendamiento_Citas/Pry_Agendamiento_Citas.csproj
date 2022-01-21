@@ -83,6 +83,35 @@
     <Content Include="stilos\style.min.css" />
     <Content Include="stilos\stylesheet.css" />
     <Content Include="Template\Agendar.aspx" />
+    <Content Include="Template\Assets\css\bootstrap-table.css" />
+    <Content Include="Template\Assets\css\bootstrap-theme.css" />
+    <Content Include="Template\Assets\css\bootstrap-theme.min.css" />
+    <Content Include="Template\Assets\css\bootstrap.css" />
+    <Content Include="Template\Assets\css\bootstrap.min.css" />
+    <Content Include="Template\Assets\css\datepicker.css" />
+    <Content Include="Template\Assets\css\datepicker3.css" />
+    <Content Include="Template\Assets\css\font-awesome.min.css" />
+    <Content Include="Template\Assets\css\styles.css" />
+    <Content Include="Template\Assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Template\Assets\imagenes\editar10.gif" />
+    <Content Include="Template\Assets\imagenes\eliminar.gif" />
+    <Content Include="Template\Assets\imagenes\search.png" />
+    <Content Include="Template\Assets\img\avatar-illustrated-02.png" />
+    <Content Include="Template\Assets\img\avatar-illustrated-03.png" />
+    <Content Include="Template\Assets\js\bootstrap-datepicker.js" />
+    <Content Include="Template\Assets\js\bootstrap.js" />
+    <Content Include="Template\Assets\js\bootstrap.min.js" />
+    <Content Include="Template\Assets\js\chart-data.js" />
+    <Content Include="Template\Assets\js\chart.min.js" />
+    <Content Include="Template\Assets\js\custom.js" />
+    <Content Include="Template\Assets\js\easypiechart-data.js" />
+    <Content Include="Template\Assets\js\easypiechart.js" />
+    <Content Include="Template\Assets\js\html5shiv.min.js" />
+    <Content Include="Template\Assets\js\jquery-1.11.1.min.js" />
+    <Content Include="Template\Assets\js\lumino.glyphs.js" />
+    <Content Include="Template\Assets\js\npm.js" />
+    <Content Include="Template\Assets\js\respond.min.js" />
     <Content Include="Template\css\bootstrap-table.css" />
     <Content Include="Template\css\bootstrap-theme.css" />
     <Content Include="Template\css\bootstrap-theme.min.css" />
@@ -97,6 +126,7 @@
     <Content Include="Template\img\avatar-illustrated-02.png" />
     <Content Include="Template\img\avatar-illustrated-03.png" />
     <Content Include="Template\Inicio.aspx" />
+    <Content Include="Template\InicioPrb.aspx" />
     <Content Include="Template\js\bootstrap-datepicker.js" />
     <Content Include="Template\js\bootstrap.js" />
     <Content Include="Template\js\bootstrap.min.js" />
@@ -145,6 +175,13 @@
     <Compile Include="Template\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Template\InicioPrb.aspx.cs">
+      <DependentUpon>InicioPrb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\InicioPrb.aspx.designer.cs">
+      <DependentUpon>InicioPrb.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Template\NewDoctor.aspx.cs">
       <DependentUpon>NewDoctor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +202,13 @@
     </Compile>
     <Compile Include="Template\Pacientes.aspx.designer.cs">
       <DependentUpon>Pacientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Page.Master.cs">
+      <DependentUpon>Page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Page.Master.designer.cs">
+      <DependentUpon>Page.Master</DependentUpon>
     </Compile>
     <Compile Include="Template\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -190,6 +234,20 @@
     <Content Include="Template\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Template\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Template\Site1.Master" />
+    <Content Include="Template\Page.Master" />
+    <Content Include="Template\Assets\css\bootstrap-theme.css.map" />
+    <Content Include="Template\Assets\css\bootstrap-theme.min.css.map" />
+    <Content Include="Template\Assets\css\bootstrap.css.map" />
+    <Content Include="Template\Assets\css\bootstrap.min.css.map" />
+    <Content Include="Template\Assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\Assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\Assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\Assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\Assets\fonts\FontAwesome.otf" />
+    <Content Include="Template\Assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\Assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

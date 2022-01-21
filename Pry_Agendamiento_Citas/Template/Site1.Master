@@ -119,7 +119,7 @@
                         </li>
                     </ul>
                 </li>
-                 <li class="parent ">
+                <li class="parent ">
                     <a data-toggle="collapse" href="#sub-item-4">
                         <em class="far fa-calendar-alt">&nbsp;</em> Agendamiento <span data-toggle="collapse" href="#sub-item-4"
                             class="icon pull-right"><em class="fa fa-plus"></em></span>
@@ -128,26 +128,26 @@
                         <li>
                             <asp:LinkButton ID="lnk_agendamiento" runat="server" OnClick="lnk_agendamiento_Click1"><span class="fas fa-laptop-medical">&nbsp;</span> Nueva Cita</asp:LinkButton>
                         </li>
-                         <li class="parent ">
-                    <a data-toggle="collapse" href="#sub-item-5">
-                        <em class="fas fa-file-medical-alt">&nbsp;</em> Citas Agendadas <span data-toggle="collapse" href="#sub-item-5"
-                            class="icon pull-right"><em class="fa fa-plus"></em></span>
-                    </a>
-                   </li>
+                        <li class="parent ">
+                            <a data-toggle="collapse" href="#sub-item-5">
+                                <em class="fas fa-file-medical-alt">&nbsp;</em> Citas Agendadas <span data-toggle="collapse" href="#sub-item-5"
+                                    class="icon pull-right"><em class="fa fa-plus"></em></span>
+                            </a>
+                        </li>
                         <ul class="children collapse" id="sub-item-5">
-                        <li>
-                            <asp:LinkButton ID="lnk_mgeneral" runat="server" OnClick="lnk_mgeneral_Click"><span class="fa fa-arrow-right">&nbsp;</span> Medicina General</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnk_mfamiliar" runat="server" OnClick="lnk_mfamiliar_Click"><span class="fa fa-arrow-right">&nbsp;</span> Medicina Familiar</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnk_cardiologia" runat="server" OnClick="lnk_cardiologia_Click"><span class="fa fa-arrow-right">&nbsp;</span> Cardiología</asp:LinkButton>
-                        </li>
-                        <li>
-                            <asp:LinkButton ID="lnk_dermatologia" runat="server" OnClick="lnk_mgeneral_Click"><span class="fa fa-arrow-right">&nbsp;</span>Dermatología</asp:LinkButton>
-                        </li>
-                    </ul>
+                            <li>
+                                <asp:LinkButton ID="lnk_mgeneral" runat="server" OnClick="lnk_mgeneral_Click"><span class="fa fa-arrow-right">&nbsp;</span> Medicina General</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="lnk_mfamiliar" runat="server" OnClick="lnk_mfamiliar_Click"><span class="fa fa-arrow-right">&nbsp;</span> Medicina Familiar</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="lnk_cardiologia" runat="server" OnClick="lnk_cardiologia_Click"><span class="fa fa-arrow-right">&nbsp;</span> Cardiología</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="lnk_dermatologia" runat="server" OnClick="lnk_mgeneral_Click"><span class="fa fa-arrow-right">&nbsp;</span>Dermatología</asp:LinkButton>
+                            </li>
+                        </ul>
 
                     </ul>
                 </li>
@@ -184,10 +184,10 @@
                     </tr>
                 </table>
 
-                
+
             </div>
 
-            
+
 
 
         </div>
