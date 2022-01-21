@@ -11,7 +11,24 @@ namespace Pry_Agendamiento_Citas.Template
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Admin"] != null)
+            {
+                Panel1.Visible = true;
+                Panel3.Visible = true;
+            }
+            else if (Session["Med"] != null)
+            {
+                Panel2.Visible = true;
+                Panel3.Visible = true;
+            }
+            else if (Session["Pac"] != null)
+            {
+                Panel3.Visible = true;
+            }
+            else
+            {
+                Response.Redirect("~/Login.aspx");
+            }
         }
 
         protected void lnk_Inicio_Click(object sender, EventArgs e)
@@ -46,6 +63,7 @@ namespace Pry_Agendamiento_Citas.Template
 
         protected void btn_Cerrar_Session_Click(object sender, EventArgs e)
         {
+            Session.RemoveAll();
             Response.Redirect("~/login.aspx");
         }
 

@@ -37,14 +37,14 @@
                     <p class="form-label">Correo</p>
                     <asp:TextBox ID="txt_correo" class="form-input" placeholder="Ingrese su correo" runat="server"></asp:TextBox>
                 </label>
-                <label class="form-label-wrapper">
+                <%--<label class="form-label-wrapper">
                     <p class="form-label">Usuario</p>
                     <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese su usuario" runat="server"></asp:TextBox>
                 </label>
                 <label class="form-label-wrapper">
                     <p class="form-label">Contraseña</p>
                     <asp:TextBox ID="txt_password" class="form-input" placeholder="Ingrese su contraseña" runat="server"></asp:TextBox>
-                </label>
+                </label>--%>
                 <br />
                 <asp:Button ID="btn_registrar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Registrar" />
                 <br /><br />

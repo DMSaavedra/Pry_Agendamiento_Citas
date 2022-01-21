@@ -24,13 +24,16 @@
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
+                        <center>
+                            <asp:Label runat="server" Text="" ID="lbl_mensaje"></asp:Label>
+                        </center>
                         <label class="form-label-wrapper">
                             <p class="form-label">Usuario</p>
                             <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese su usuario" runat="server"></asp:TextBox>
                         </label>
                         <label class="form-label-wrapper">
-                            <p class="form-label">Contraseña</p>
-                            <asp:TextBox ID="txt_password" type="password" class="form-input" placeholder="Ingrese su contraseña" runat="server"></asp:TextBox>
+                            <p class="form-label">Cedula</p>
+                            <asp:TextBox ID="txt_password" type="password" class="form-input" placeholder="Ingrese su numero de Cedula" runat="server"></asp:TextBox>
                         </label>
                         <asp:LinkButton ID="lnk_olvido" class="link-info forget-link" runat="server">Olvido su Contraseña?</asp:LinkButton>
                         <br />
