@@ -49,6 +49,7 @@
                 <input type="time" name="" id="" class="form-control form-control-sm">
             </div>
         </div>
+        <asp:Button ID="btn_enviar" runat="server" Text="Enviar Cita" />
         <br>
     </div>
 </asp:Content>
