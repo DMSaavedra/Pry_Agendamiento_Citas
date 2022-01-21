@@ -70,7 +70,7 @@
 
             <ul class="nav menu">
                 <li class="active">
-                    <asp:LinkButton ID="lnk_Inicio" runat="server" OnClick="lnk_Inicio_Click"><em class="fa fa-dashboard">&nbsp;</em>Inicio</asp:LinkButton>
+                    <asp:LinkButton ID="lnk_Inicio" runat="server" OnClick="lnk_Inicio_Click"><em class="fas fa-home">&nbsp;</em>Inicio</asp:LinkButton>
                 <li class="parent ">
                     <a data-toggle="collapse" href="#sub-item-1">
                         <em class="fas fa-user-injured">&nbsp;</em> Pacientes <span data-toggle="collapse"
@@ -81,7 +81,7 @@
                             <asp:LinkButton ID="lnk_New_Paciente" runat="server" OnClick="lnk_New_Paciente_Click"><span class="fas fa-user-plus">&nbsp;</span>Nuevo Paciente</asp:LinkButton>
                         </li>
                         <li><a class="" href="#">
-                            <span class="fa fa-arrow-right">&nbsp;</span> Listado Pacientes
+                            <span class="fas fa-clipboard-list">&nbsp;</span> Listado Pacientes
                         </a>
                         </li>
                     </ul>
@@ -94,10 +94,10 @@
                     </a>
                     <ul class="children collapse" id="sub-item-2">
                         <li>
-                            <asp:LinkButton ID="lnk_New_Especialidad" runat="server" OnClick="lnk_New_Especialidad_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Especialidad</asp:LinkButton>
+                            <asp:LinkButton ID="lnk_New_Especialidad" runat="server" OnClick="lnk_New_Especialidad_Click"><span class="far fa-notes-medical">&nbsp;</span> Nueva Especialidad</asp:LinkButton>
                         </li>
                         <li><a class="" href="#">
-                            <span class="fa fa-arrow-right">&nbsp;</span> Listado Especialidades
+                            <span class="fas fa-stethoscope">&nbsp;</span> Listado Especialidades
                         </a>
                         </li>
 
@@ -111,10 +111,10 @@
                     </a>
                     <ul class="children collapse" id="sub-item-3">
                         <li>
-                            <asp:LinkButton ID="lnk_New_Doctor" runat="server" OnClick="lnk_New_Doctor_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Doctor</asp:LinkButton>
+                            <asp:LinkButton ID="lnk_New_Doctor" runat="server" OnClick="lnk_New_Doctor_Click"><span class="fas fa-users-medical">&nbsp;</span> Nuevo Doctor</asp:LinkButton>
                         </li>
                         <li><a class="" href="#">
-                            <span class="fa fa-arrow-right">&nbsp;</span> Listado Doctores
+                            <span class="fas fa-user-md">&nbsp;</span> Listado Doctores
                         </a>
                         </li>
                     </ul>
@@ -126,7 +126,7 @@
                     </a>
                     <ul class="children collapse" id="sub-item-4">
                         <li>
-                            <asp:LinkButton ID="lnk_agendamiento" runat="server" OnClick="lnk_agendamiento_Click1"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Cita</asp:LinkButton>
+                            <asp:LinkButton ID="lnk_agendamiento" runat="server" OnClick="lnk_agendamiento_Click1"><span class="fas fa-laptop-medical">&nbsp;</span> Nueva Cita</asp:LinkButton>
                         </li>
                          <li class="parent ">
                     <a data-toggle="collapse" href="#sub-item-5">
