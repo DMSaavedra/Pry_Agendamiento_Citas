@@ -13,9 +13,24 @@ namespace Capa_Negocio
         //Instancia de DataContex
         private static DataClasses1DataContext dc = new DataClasses1DataContext();
 
+        //Usuarios General
         public static List<Tbl_Usuario> obtener_usuario()
         {
             var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == 'A');
+            return lista.ToList();
+        }
+
+        //Pacientes
+        public static List<Tbl_Usuario> obtener_usu_paciente()
+        {
+            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == 'A' & usu.tusu_id == 3);
+            return lista.ToList();
+        }
+
+        //Medicos
+        public static List<Tbl_Usuario> obtener_usu_medicos()
+        {
+            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == 'A' & usu.tusu_id == 2);
             return lista.ToList();
         }
 

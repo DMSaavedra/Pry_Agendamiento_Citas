@@ -71,5 +71,16 @@ namespace Pry_Agendamiento_Citas.Template
         {
             Response.Redirect("~/Template/New_Consultorio.aspx");
         }
+
+        protected void lnk_List_Paciente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/List_Paciente.aspx");
+
+        }
+
+        protected void lnk_List_Doctor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/List_Doctor.aspx");
+        }
     }
 }

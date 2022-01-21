@@ -9,7 +9,7 @@ using Capa_Negocio;
 
 namespace Pry_Agendamiento_Citas.Template
 {
-    public partial class New_Especialidad : System.Web.UI.Page
+    public partial class List_Doctor : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,6 +28,23 @@ namespace Pry_Agendamiento_Citas.Template
             else
             {
                 Response.Redirect("~/Login.aspx");
+            }
+
+            if (!IsPostBack)
+            {
+                cargarDoctores();
+            }
+        }
+
+        private void cargarDoctores()
+        {
+            List<Tbl_Usuario> listadoc = new List<Tbl_Usuario>();
+            listadoc = Usuario_Log.obtener_usu_medicos();
+
+            if (listadoc != null)
+            {
+                grv_doctores.DataSource = listadoc;
+                grv_doctores.DataBind();
             }
         }
     }

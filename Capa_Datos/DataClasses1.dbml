@@ -49,7 +49,7 @@
       <Column Name="usu_telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="usu_nomLogin" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="usu_grupo_sanguineo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="usu_genero" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="usu_genero" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="usu_correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="usu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Column Name="tusu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />

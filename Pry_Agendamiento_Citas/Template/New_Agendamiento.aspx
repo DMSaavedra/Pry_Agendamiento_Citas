@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_cabecera" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_nom_user" runat="server">
+    Bienvenido: 
+    <asp:Label ID="lbl_nombre" runat="server" Text="" Font-Italic="True"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cph_header" runat="server">
     Agendamiento

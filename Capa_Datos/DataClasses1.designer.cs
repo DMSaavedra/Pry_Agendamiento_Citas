@@ -933,7 +933,7 @@ namespace Capa_Datos
 		
 		private System.Nullable<int> _usu_grupo_sanguineo;
 		
-		private System.Nullable<char> _usu_genero;
+		private string _usu_genero;
 		
 		private string _usu_correo;
 		
@@ -967,7 +967,7 @@ namespace Capa_Datos
     partial void Onusu_nomLoginChanged();
     partial void Onusu_grupo_sanguineoChanging(System.Nullable<int> value);
     partial void Onusu_grupo_sanguineoChanged();
-    partial void Onusu_generoChanging(System.Nullable<char> value);
+    partial void Onusu_generoChanging(string value);
     partial void Onusu_generoChanged();
     partial void Onusu_correoChanging(string value);
     partial void Onusu_correoChanged();
@@ -1127,8 +1127,8 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_genero", DbType="Char(1)")]
-		public System.Nullable<char> usu_genero
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_genero", DbType="VarChar(10)")]
+		public string usu_genero
 		{
 			get
 			{

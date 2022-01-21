@@ -55,7 +55,7 @@
                         <asp:ContentPlaceHolder ID="cph_nom_user" runat="server"></asp:ContentPlaceHolder>
                     </div>
                     <div class="profile-usertitle-status">
-                        <asp:Button ID="btn_Cerrar_Session" runat="server" class="dropdown-toggle count-info" Text="SALIR" OnClick="btn_Cerrar_Session_Click" />
+                        <asp:Button ID="btn_Cerrar_Session" runat="server" class="dropdown-toggle count-info" Text="SALIR" OnClick="btn_Cerrar_Session_Click" CssClass="btn btn-danger btn-sm"/>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -78,9 +78,8 @@
                             <li>
                                 <asp:LinkButton ID="lnk_New_Paciente" runat="server" OnClick="lnk_New_Paciente_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Paciente</asp:LinkButton>
                             </li>
-                            <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Listado Pacientes
-                            </a>
+                            <li>
+                                <asp:LinkButton ID="lnk_List_Paciente" runat="server" OnClick="lnk_List_Paciente_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Pacientes</asp:LinkButton>
                             </li>
                         </ul>
                     </li>
@@ -95,9 +94,8 @@
                             <li>
                                 <asp:LinkButton ID="lnk_New_Doctor" runat="server" OnClick="lnk_New_Doctor_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Doctor</asp:LinkButton>
                             </li>
-                            <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Listado Doctores
-                            </a>
+                            <li>
+                                <asp:LinkButton ID="lnk_List_Doctor" runat="server" OnClick="lnk_List_Doctor_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Doctores</asp:LinkButton>
                             </li>
                         </ul>
                     </li>

@@ -15,6 +15,15 @@ namespace Pry_Agendamiento_Citas.Template
     {
 
         /// <summary>
+        /// Control lbl_nombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_nombre;
+
+        /// <summary>
         /// Control FileUpload1.
         /// </summary>
         /// <remarks>
