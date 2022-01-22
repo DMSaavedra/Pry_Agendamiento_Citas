@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Page.Master" AutoEventWireup="true" CodeBehind="New_Agendamiento.aspx.cs" Inherits="Pry_Agendamiento_Citas.Template.New_Agendamiento" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_cabecera" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_nom_user" runat="server">
@@ -14,17 +15,26 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="cph_mensaje" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cph_contenido" runat="server">
-     <div class="container-fluid">
+    <div class="container-fluid">
         <div class="form row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">
+                    Paciente<span
+                        class="m-0 font-weight-bold text-danger">*</span></label>
+                <select name="" id="" class="form-control">
+                    <option value="0" selected>Seleccione</option>
+                    <option value="1">IVAN </option>
+                    <option value="2">JORGE</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
                 <label for="validationCustom01">
                     Fecha del Turno<span
                         class="m-0 font-weight-bold text-danger">*</span></label>
 
-                <input type="date" id="txtFechaReg" name="txtFechaReg" class="form-control form-control-sm"
-                    >
+                <input type="date" id="txtFechaReg" name="txtFechaReg" class="form-control form-control-sm">
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                 <label for="validationCustom01">
                     Especialidad<span
                         class="m-0 font-weight-bold text-danger">*</span></label>

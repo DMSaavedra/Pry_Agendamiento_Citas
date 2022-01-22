@@ -47,5 +47,26 @@ namespace Pry_Agendamiento_Citas.Template
                 grv_doctores.DataBind();
             }
         }
+
+        protected void grv_doctores_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = Convert.ToInt32(e.CommandArgument);
+
+            if (e.CommandName == "Editar")
+            {
+                Response.Redirect("~/Template/New_Doctor.aspx?cod=" + codigo, true);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                Tbl_Usuario mediEl = new Tbl_Usuario();
+                mediEl = Doctor_Log.obtener_med_xid(codigo);
+
+                if (mediEl != null)
+                {
+                    Doctor_Log.deleteMedi(mediEl);
+                    cargarDoctores();
+                }
+            }
+        }
     }
 }
