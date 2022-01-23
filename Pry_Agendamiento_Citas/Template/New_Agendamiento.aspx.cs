@@ -29,6 +29,21 @@ namespace Pry_Agendamiento_Citas.Template
             {
                 Response.Redirect("~/Login.aspx");
             }
+            if (!IsPostBack)
+            {
+                cargarAgendamiento();
+            }
+        }
+        private void cargarAgendamiento()
+        {
+            List<Tbl_Cita_Agendada> listapac = new List<Tbl_Cita_Agendada>();
+            listapac = Usuario_Log.obtener_usu_paciente();
+
+            if (listapac != null)
+            {
+                grv_paciente.DataSource = listapac;
+                grv_paciente.DataBind();
+            }
         }
     }
 }

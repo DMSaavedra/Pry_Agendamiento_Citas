@@ -33,5 +33,16 @@ namespace Capa_Datos.Properties {
                 return ((string)(this["CitasAgendaminentoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANTHONY_JERES;Initial Catalog=CitasAgendaminento;Integrated Security=" +
+            "True")]
+        public string CitasAgendaminentoConnectionString1 {
+            get {
+                return ((string)(this["CitasAgendaminentoConnectionString1"]));
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace Capa_Datos
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::Capa_Datos.Properties.Settings.Default.CitasAgendaminentoConnectionString, mappingSource)
+				base(global::Capa_Datos.Properties.Settings.Default.CitasAgendaminentoConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -134,6 +134,8 @@ namespace Capa_Datos
 		
 		private System.Nullable<int> _espc_id;
 		
+		private System.Nullable<char> _cagn_estado;
+		
 		private EntityRef<Tbl_Especialidad> _Tbl_Especialidad;
 		
 		private EntityRef<Tbl_Usuario> _Tbl_Usuario;
@@ -152,6 +154,8 @@ namespace Capa_Datos
     partial void Oncagn_horaAgenChanged();
     partial void Onespc_idChanging(System.Nullable<int> value);
     partial void Onespc_idChanged();
+    partial void Oncagn_estadoChanging(System.Nullable<char> value);
+    partial void Oncagn_estadoChanged();
     #endregion
 		
 		public Tbl_Cita_Agendada()
@@ -265,6 +269,26 @@ namespace Capa_Datos
 					this._espc_id = value;
 					this.SendPropertyChanged("espc_id");
 					this.Onespc_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_estado", DbType="Char(1)")]
+		public System.Nullable<char> cagn_estado
+		{
+			get
+			{
+				return this._cagn_estado;
+			}
+			set
+			{
+				if ((this._cagn_estado != value))
+				{
+					this.Oncagn_estadoChanging(value);
+					this.SendPropertyChanging();
+					this._cagn_estado = value;
+					this.SendPropertyChanged("cagn_estado");
+					this.Oncagn_estadoChanged();
 				}
 			}
 		}
