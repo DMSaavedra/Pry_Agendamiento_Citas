@@ -139,6 +139,7 @@
     <Content Include="Template\js\npm.js" />
     <Content Include="Template\js\respond.min.js" />
     <Content Include="Template\List_Doctor.aspx" />
+    <Content Include="Template\List_Especialidad.aspx" />
     <Content Include="Template\List_Paciente.aspx" />
     <Content Include="Template\New_Agendamiento.aspx" />
     <Content Include="Template\New_Consultorio.aspx" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="Template\List_Doctor.aspx.designer.cs">
       <DependentUpon>List_Doctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\List_Especialidad.aspx.cs">
+      <DependentUpon>List_Especialidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\List_Especialidad.aspx.designer.cs">
+      <DependentUpon>List_Especialidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\List_Paciente.aspx.cs">
       <DependentUpon>List_Paciente.aspx</DependentUpon>
