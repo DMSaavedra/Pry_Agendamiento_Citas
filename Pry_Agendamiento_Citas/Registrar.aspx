@@ -21,34 +21,37 @@
             <h1 class="sign-up__title">REGISTRO USUARIOS</h1>
             <p class="sign-up__subtitle">Si no posee de un usuario, registrese aqui!.</p>
             <form runat="server" class="sign-up-form form">
-                <label class="form-label-wrapper">
-                    <p class="form-label">Nombre y Apellido</p>
-                    <asp:TextBox ID="txt_nombapell" class="form-input" placeholder="Ingrese su nombre y apellido" runat="server"></asp:TextBox>
-                </label>
-                <label class="form-label-wrapper">
-                    <p class="form-label">Cédula</p>
-                    <asp:TextBox ID="txt_ced" class="form-input" placeholder="Ingrese su cédula" runat="server"></asp:TextBox>
-                </label>
-                <%--<label class="form-label-wrapper">
-                    <p class="form-label">Teléfono</p>
-                    <asp:TextBox ID="txt_tel" class="form-input" placeholder="Ingrese su teléfono" runat="server"></asp:TextBox>
-                </label>--%>
-                <label class="form-label-wrapper">
-                    <p class="form-label">Correo</p>
-                    <asp:TextBox ID="txt_correo" class="form-input" placeholder="Ingrese su correo" runat="server"></asp:TextBox>
-                </label>
-                <%--<label class="form-label-wrapper">
-                    <p class="form-label">Usuario</p>
-                    <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese su usuario" runat="server"></asp:TextBox>
-                </label>
-                <label class="form-label-wrapper">
-                    <p class="form-label">Contraseña</p>
-                    <asp:TextBox ID="txt_password" class="form-input" placeholder="Ingrese su contraseña" runat="server"></asp:TextBox>
-                </label>--%>
-                <br />
-                <asp:Button ID="btn_registrar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Registrar" />
-                <br /><br />
-                <asp:LinkButton ID="lnk_Cancelar" class="link-info" runat="server" OnClick="lnk_Cancelar_Click">Cancelar</asp:LinkButton>
+                <asp:Timer ID="Timer1" runat="server" Enabled="False" Interval="3000" OnTick="Timer1_Tick"></asp:Timer>
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <label class="form-label-wrapper">
+                            <p class="form-label">Apellido y Nombre</p>
+                            <asp:TextBox ID="txt_nombapell" class="form-input" runat="server" placeholder="Ingrese un Apellido y un Nombre" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
+                        </label>
+                        <label class="form-label-wrapper">
+                            <p class="form-label">Cédula</p>
+                            <asp:TextBox ID="txt_ced" class="form-input" placeholder="Ingrese su cédula" runat="server"></asp:TextBox>
+                        </label>
+                        <label class="form-label-wrapper">
+                            <p class="form-label">Correo</p>
+                            <asp:TextBox ID="txt_correo" class="form-input" placeholder="Ingrese su correo" runat="server" TextMode="Email"></asp:TextBox>
+                        </label>
+                        <label class="form-label-wrapper">
+                            <p class="form-label">Usuario</p>
+                            <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese un usuario" runat="server"></asp:TextBox>
+                        </label>
+                        <br />
+                        <asp:Button ID="btn_registrar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Registrar" OnClick="btn_registrar_Click"/>
+                        <br />
+                        <br />
+                        <asp:LinkButton ID="lnk_Cancelar" class="link-info" runat="server" OnClick="lnk_Cancelar_Click">Cancelar</asp:LinkButton>
+                        <center>
+                            <br />
+                            <asp:Label runat="server" ID="lbl_mensaje" Text=""></asp:Label>
+                        </center>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </form>
         </article>
     </main>

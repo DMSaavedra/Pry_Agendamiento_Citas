@@ -82,5 +82,22 @@ namespace Capa_Negocio
                 throw new ArgumentException("Los datos no han sido guardados <br/>" + ex.Message);
             }
         }
+
+        //Registro Nuevo Usuario - Administrador
+        public static void saveInfoAdmin(Tbl_Usuario usuario)
+        {
+            try
+            {
+                usuario.usu_estado = 'A';
+                usuario.tusu_id = 1;
+
+                dc.Tbl_Usuario.InsertOnSubmit(usuario);
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Los datos no han sido guardados <br/>" + ex.Message);
+            }
+        }
     }
 }
