@@ -16,20 +16,20 @@
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cph_contenido" runat="server">
     <div class="container-fluid">
+        <asp:Label ID="lbl_mensaje" runat="server" Text="" ForeColor="Green"></asp:Label>
         <div class="form row">
             <div class="col-md-4 mb-3">
-                <label for="validationCustom01">
-                    Numero de Consultorio<span class="m-0 font-weight-bold text-danger">
-							*</span></label>
-                <input type="text" id="clnt" name="clnt" autocomplete="off"
-                    onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"
-                    class="form-control form-control-sm" />
+                  <label for="validationCustom01">Número Consultorio<span class="m-0 font-weight-bold text-danger">*</span></label>
+                        <asp:TextBox ID="txt_numconsul" runat="server" CssClass="form-control" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
             </div>
             <div class="col-md-4 mb-3">
                 <label>Imagen</label>
-                <asp:FileUpload ID="FileUpload1" runat="server" class="form-control form-control-sm" />
+                <asp:FileUpload ID="ful_imagen" runat="server" class="form-control form-control-sm" />
             </div>
         </div>
         <br />
+        <asp:Button ID="btn_Save_Consul" runat="server" Text="Registrar" CssClass="btn btn-primary" Width="230px" OnClick="btn_Save_Consul_Click" />
+                
+        <asp:Button ID="btn_Modify_Consul" runat="server" Text="Modificar" CssClass="btn btn-warning" Width="230px" OnClick="btn_Modify_Consul_Click" Visible="false"/>
     </div>
 </asp:Content>

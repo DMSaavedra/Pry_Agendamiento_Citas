@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Pry_Agendamiento_Citas.Template
+namespace Pry_Agendamiento_Citas
 {
 
 
-    public partial class New_Consultorio
+    public partial class List_Consultorio
     {
 
         /// <summary>
@@ -24,48 +24,30 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Label lbl_nombre;
 
         /// <summary>
-        /// Control lbl_mensaje.
+        /// Control ScriptManager1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_mensaje;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// Control txt_numconsul.
+        /// Control UpdatePanel1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_numconsul;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control ful_imagen.
+        /// Control grv_consultorios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload ful_imagen;
-
-        /// <summary>
-        /// Control btn_Save_Consul.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Save_Consul;
-
-        /// <summary>
-        /// Control btn_Modify_Consul.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Modify_Consul;
+        protected global::System.Web.UI.WebControls.GridView grv_consultorios;
     }
 }
