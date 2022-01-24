@@ -82,5 +82,20 @@ namespace Pry_Agendamiento_Citas.Template
         {
             Response.Redirect("~/Template/List_Doctor.aspx");
         }
+
+        protected void lnk_List_Especialidad_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/List_Especialidad.aspx");
+        }
+
+        protected void lnk_List_Consultorio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/List_Consultorio.aspx");
+        }
+
+        protected void lnk_List_Agendamiento_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/List_Agendamiento.aspx");
+        }
     }
 }

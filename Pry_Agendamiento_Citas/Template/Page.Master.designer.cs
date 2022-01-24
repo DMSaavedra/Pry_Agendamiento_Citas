@@ -114,6 +114,15 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_New_Especialidad;
 
         /// <summary>
+        /// Control lnk_List_Especialidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_List_Especialidad;
+
+        /// <summary>
         /// Control lnk_agendamiento.
         /// </summary>
         /// <remarks>
@@ -123,6 +132,15 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_agendamiento;
 
         /// <summary>
+        /// Control lnk_List_Agendamiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_List_Agendamiento;
+
+        /// <summary>
         /// Control lnk_consultorio.
         /// </summary>
         /// <remarks>
@@ -130,6 +148,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnk_consultorio;
+
+        /// <summary>
+        /// Control lnk_List_Consultorio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_List_Consultorio;
 
         /// <summary>
         /// Control Panel2.

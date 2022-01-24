@@ -109,9 +109,8 @@
                             <li>
                                 <asp:LinkButton ID="lnk_New_Especialidad" runat="server" OnClick="lnk_New_Especialidad_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Especialidad</asp:LinkButton>
                             </li>
-                            <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Listado Especialidades
-                            </a>
+                            <li>
+                                <asp:LinkButton ID="lnk_List_Especialidad" runat="server" OnClick="lnk_List_Especialidad_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Especialidades</asp:LinkButton>
                             </li>
 
                         </ul>
@@ -126,9 +125,7 @@
                             <li>
                                 <asp:LinkButton ID="lnk_agendamiento" runat="server" OnClick="lnk_agendamiento_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Cita</asp:LinkButton>
                             </li>
-                            <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Citas Agendadas
-                            </a>
+                                <asp:LinkButton ID="lnk_List_Agendamiento" runat="server" OnClick="lnk_List_Agendamiento_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Agendamiento</asp:LinkButton>
                             </li>
 
                         </ul>
@@ -143,9 +140,7 @@
                             <li>
                                 <asp:LinkButton ID="lnk_consultorio" runat="server" OnClick="lnk_consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Consultorio</asp:LinkButton>
                             </li>
-                            <li><a class="" href="#">
-                                <span class="fa fa-arrow-right">&nbsp;</span> Listado de Consultorios
-                            </a>
+                            <asp:LinkButton ID="lnk_List_Consultorio" runat="server" OnClick="lnk_List_Consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Consultorio</asp:LinkButton>
                             </li>
 
                         </ul>
