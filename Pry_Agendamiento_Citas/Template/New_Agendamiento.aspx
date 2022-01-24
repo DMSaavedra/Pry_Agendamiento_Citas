@@ -28,7 +28,8 @@
                 <label for="validationCustom01">
                     Fecha del Turno<span
                         class="m-0 font-weight-bold text-danger">*</span></label>
-                <input type="date" id="txt_fechaR" name="txt-fechaR" class="form-control form-control-sm">
+                <asp:TextBox ID="txt_fechaRT" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+<%--                <input type="date" id="txt_fechaR" name="txt-fechaR" class="form-control form-control-sm">--%>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationCustom01">
@@ -58,7 +59,8 @@
             </div>
             <div class="col-md-3 mb-3">
                 <label>Hora del Turno</label>
-                <input type="time" name="txt_horat" id="txt_horat" class="form-control form-control-sm">
+                <asp:TextBox ID="txt_horaRT" runat="server" CssClass="form-control" TextMode="Time"></asp:TextBox>
+<%--                <input type="time" name="txt_horat" id="txt_horat" class="form-control form-control-sm">--%>
             </div>
         </div>
         <br />

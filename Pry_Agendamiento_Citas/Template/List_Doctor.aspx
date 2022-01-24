@@ -18,7 +18,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <div class="container-fluid">
-                <asp:GridView ID="grv_doctores" runat="server" AutoGenerateColumns="False" OnRowCommand="grv_doctores_RowCommand">
+                <asp:GridView ID="grv_doctores" runat="server" CssClass="table table-bordered table-responsive" AutoGenerateColumns="False" OnRowCommand="grv_doctores_RowCommand">
                     <Columns>
                         <asp:TemplateField HeaderText="" ItemStyle-Width="1cm">
                             <ItemTemplate>

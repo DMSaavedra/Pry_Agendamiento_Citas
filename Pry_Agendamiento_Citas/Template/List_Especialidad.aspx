@@ -18,8 +18,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <div class="container-fluid">
-                <asp:GridView ID="grv_especialidad" runat="server" AutoGenerateColumns="False" OnRowCommand="grv_especialidad_RowCommand" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical">
-                    <AlternatingRowStyle BackColor="#CCCCCC" />
+                <asp:GridView ID="grv_especialidad" runat="server" CssClass="table table-bordered table-responsive" AutoGenerateColumns="False" OnRowCommand="grv_especialidad_RowCommand">
                     <Columns>
                         <asp:TemplateField HeaderText="" ItemStyle-Width="1cm">
                             <ItemTemplate>
@@ -45,7 +44,7 @@
                             </ItemTemplate>
                             <ItemStyle Width="5cm" />
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="DESCRIPCIÓN" ItemStyle-Width="2cm">
+                        <asp:TemplateField HeaderText="DESCRIPCIÓN" ItemStyle-Width="15cm">
                             <ItemTemplate>
                                 <asp:Label ID="espc_descripcion" runat="server" Text='<%#Eval("espc_descripcion") %>'></asp:Label>
                             </ItemTemplate>
@@ -64,14 +63,6 @@
                             <ItemStyle Width="3cm" />
                         </asp:TemplateField>
                     </Columns>
-                    <FooterStyle BackColor="#CCCCCC" />
-                    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                    <SortedAscendingHeaderStyle BackColor="#808080" />
-                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                    <SortedDescendingHeaderStyle BackColor="#383838" />
                 </asp:GridView>
             </div>
         </ContentTemplate>

@@ -55,7 +55,7 @@
                         <asp:ContentPlaceHolder ID="cph_nom_user" runat="server"></asp:ContentPlaceHolder>
                     </div>
                     <div class="profile-usertitle-status">
-                        <asp:Button ID="btn_Cerrar_Session" runat="server" class="dropdown-toggle count-info" Text="SALIR" OnClick="btn_Cerrar_Session_Click" CssClass="btn btn-danger btn-sm"/>
+                        <asp:Button ID="btn_Cerrar_Session" runat="server" class="dropdown-toggle count-info" Text="SALIR" OnClick="btn_Cerrar_Session_Click" CssClass="btn btn-danger btn-sm" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -125,6 +125,7 @@
                             <li>
                                 <asp:LinkButton ID="lnk_agendamiento" runat="server" OnClick="lnk_agendamiento_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Cita</asp:LinkButton>
                             </li>
+                            <li>
                                 <asp:LinkButton ID="lnk_List_Agendamiento" runat="server" OnClick="lnk_List_Agendamiento_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Agendamiento</asp:LinkButton>
                             </li>
 
@@ -140,7 +141,8 @@
                             <li>
                                 <asp:LinkButton ID="lnk_consultorio" runat="server" OnClick="lnk_consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Consultorio</asp:LinkButton>
                             </li>
-                            <asp:LinkButton ID="lnk_List_Consultorio" runat="server" OnClick="lnk_List_Consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Consultorio</asp:LinkButton>
+                            <li>
+                                <asp:LinkButton ID="lnk_List_Consultorio" runat="server" OnClick="lnk_List_Consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Consultorio</asp:LinkButton>
                             </li>
 
                         </ul>

@@ -19,7 +19,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <div class="container-fluid">
-                <asp:GridView ID="grv_paciente" runat="server" AutoGenerateColumns="False" OnRowCommand="grv_paciente_RowCommand">
+                <asp:GridView ID="grv_paciente" runat="server" CssClass="table table-bordered table-responsive" AutoGenerateColumns="False" OnRowCommand="grv_paciente_RowCommand">
                     <Columns>
                         <asp:TemplateField HeaderText="" ItemStyle-Width="1cm">
                             <ItemTemplate>

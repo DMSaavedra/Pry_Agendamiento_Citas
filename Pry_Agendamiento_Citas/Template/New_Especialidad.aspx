@@ -21,11 +21,11 @@
         <div class="form row">
             <div class="col-md-3 mb-3">
                 <label>Especialidad</label>
-                <asp:TextBox ID="txt_especialidad" runat="server" class="form-control form-control-sm"></asp:TextBox>
+                <asp:TextBox ID="txt_especialidad" runat="server" class="form-control" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
             </div>
             <div class="col-md-5 mb-3">
                 <label>Descripcion Especialidad</label>
-                <asp:TextBox ID="txt_despecialidad" runat="server" class="form-control form-control-sm"></asp:TextBox>
+                <asp:TextBox ID="txt_despecialidad" runat="server" class="form-control"></asp:TextBox>
             </div>
             <div class="col-md-3 mb-3">
                 <label>Edad Dirigida</label>
