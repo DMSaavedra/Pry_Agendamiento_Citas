@@ -12,9 +12,14 @@ namespace Pry_Agendamiento_Citas
 {
     public partial class login : System.Web.UI.Page
     {
+        int contador = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+            }
+            Session["con"] = Session["Conantiguo"];
         }
 
         protected void lnk_Registro_Click(object sender, EventArgs e)
@@ -34,7 +39,8 @@ namespace Pry_Agendamiento_Citas
             {
                 lbl_mensaje.ForeColor = Color.OrangeRed;
                 lbl_mensaje.Text = "Ingrese su Usuario..";
-            }else if (string.IsNullOrEmpty(txt_password.Text))
+            }
+            else if (string.IsNullOrEmpty(txt_password.Text))
             {
                 lbl_mensaje.ForeColor = Color.OrangeRed;
                 lbl_mensaje.Text = "Ingrese su Cedula..";
@@ -74,6 +80,19 @@ namespace Pry_Agendamiento_Citas
                         {
                             lbl_mensaje.ForeColor = Color.OrangeRed;
                             lbl_mensaje.Text = "Datos Incorrectos";
+
+                            lbl_intentos.Text = (contador + (Convert.ToInt32(Session["con"]))).ToString();
+                            Session["Conantiguo"] = lbl_intentos.Text.ToString();
+
+                            if (Convert.ToInt32(lbl_intentos.Text) == 3)
+                            {
+                                btn_ingresar.Visible = false;
+                                lnk_olvido.Visible = true;
+
+                                //Session["con"] = null;
+                                //Session["Conantiguo"] = null;
+
+                            }
                         }
                     }
                     else
@@ -82,8 +101,21 @@ namespace Pry_Agendamiento_Citas
                         lbl_mensaje.Text = "Usuario NO EXISTE en la BBDD!";
                     }
                 }
-
             }
+        }
+        protected void lnk_olvido_Click(object sender, EventArgs e)
+        {
+            btn_recuperar.Visible = true;
+            txt_password.Visible = false;
+            Label2.Visible = false;
+
+        }
+
+        protected void btn_recuperar_Click(object sender, EventArgs e)
+        {
+            btn_recuperar.Visible = false;
+            txt_password.Visible = true;
+            Label2.Visible = true;
         }
     }
 }

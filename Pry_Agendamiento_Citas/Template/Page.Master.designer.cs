@@ -69,6 +69,15 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// Control lnk_Usuarios_Adm.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_Usuarios_Adm;
+
+        /// <summary>
         /// Control lnk_New_Paciente.
         /// </summary>
         /// <remarks>

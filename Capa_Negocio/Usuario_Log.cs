@@ -34,6 +34,12 @@ namespace Capa_Negocio
             return lista.ToList();
         }
 
+        //Administradores
+        public static List<Tbl_Usuario> obtener_admins()
+        {
+            var lista = dc.Tbl_Usuario.Where(usu => usu.usu_estado == 'A' & usu.tusu_id == 1);
+            return lista.ToList();
+        }
         public static bool autentificar_usu (string nombre)
         {
             var auto = dc.Tbl_Usuario.Any(usu => usu.usu_apellido_nombre.Equals(nombre));

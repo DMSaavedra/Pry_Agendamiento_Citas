@@ -32,15 +32,21 @@
                             <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese su usuario" runat="server"></asp:TextBox>
                         </label>
                         <label class="form-label-wrapper">
-                            <p class="form-label">Cedula</p>
-                            <asp:TextBox ID="txt_password" type="password" class="form-input" placeholder="Ingrese su numero de Cedula" runat="server"></asp:TextBox>
+                            <asp:Label ID="Label2" runat="server" Text="Cedula"></asp:Label>
+<%--                            <p class="form-label">Cedula</p>--%>
+                            <asp:TextBox ID="txt_password" class="form-input" placeholder="Ingrese su numero de Cedula" TextMode="Password" runat="server"></asp:TextBox>
                         </label>
-                        <asp:LinkButton ID="lnk_olvido" class="link-info forget-link" runat="server">Olvido su Contraseña?</asp:LinkButton>
+                        <asp:Button ID="btn_ingresar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Ingresar" OnClick="btn_ingresar_Click" />
+                        <asp:Button ID="btn_recuperar" class="form-btn warning-default-btn transparent-btn" runat="server" Text="Recuperar" OnClick="btn_recuperar_Click" Visible="false"/>
+                        <br />
+                        <asp:LinkButton ID="lnk_olvido" class="link-info forget-link" runat="server" Visible="false" OnClick="lnk_olvido_Click">Olvido su Contraseña?</asp:LinkButton>
                         <br />
                         <asp:LinkButton ID="lnk_Registro" runat="server" class="link-info" OnClick="lnk_Registro_Click">Registrarse</asp:LinkButton>
                         <br />
                         <br />
-                        <asp:Button ID="btn_ingresar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Ingresar" OnClick="btn_ingresar_Click" />
+                        <center>
+                            <asp:Label ID="Label1" runat="server" Text="Intentos :"></asp:Label> <asp:Label ID="lbl_intentos" runat="server" Text=""></asp:Label>
+                        </center>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </form>
