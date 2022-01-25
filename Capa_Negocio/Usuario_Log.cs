@@ -66,6 +66,21 @@ namespace Capa_Negocio
             return auto;
         }
 
+        //Verificacion de Existencia de Cedula
+        public static bool autentificarXCedula(string cedula)
+        {
+            var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == 'A' & usu.usu_cedula.Equals(cedula));
+            return auto;
+        }
+
+        //Obtener informacion por Cedula
+        public static Tbl_Usuario obtenerUsuXCedula(string cedula)
+        {
+            var auto = dc.Tbl_Usuario.Single(usu => usu.usu_estado == 'A' & usu.usu_cedula.Equals(cedula));
+            return auto;
+        }
+
+
         //Obtener Informacion por las credenciales
         public static Tbl_Usuario autentificarXlogin(string user, string cedula)
         {
