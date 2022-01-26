@@ -74,7 +74,7 @@ namespace Capa_Negocio
 
         public static bool autentificar_agen(string nombre)
         {
-            var auto = dc.Tbl_Cita_Agendada.Any(agen => agen.cagn_nombre.Equals(nombre));
+            var auto = dc.Tbl_Cita_Agendada.Any(agen => agen.cagn_paciente.Equals(nombre));
             return auto;
         }
 
@@ -87,6 +87,14 @@ namespace Capa_Negocio
         public static List<Tbl_Cita_Agendada> obtener_agendamiento()
         {
             var lista = dc.Tbl_Cita_Agendada.Where(age => age.cagn_estado == 'A' );
+            return lista.ToList();
+        }
+
+        //Lista de Citas con Fecha del Dia
+        
+        public static List<Tbl_Cita_Agendada> obtener_citasXfecha(DateTime fecha)
+        {
+            var lista = dc.Tbl_Cita_Agendada.Where(age => age.cagn_estado == 'A' && age.cagn_fechaAgen.Equals(fecha));
             return lista.ToList();
         }
 

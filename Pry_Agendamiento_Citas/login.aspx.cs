@@ -73,7 +73,7 @@ namespace Pry_Agendamiento_Citas
                             if (tusu == 3)
                             {
                                 Session["Pac"] = txt_usuario.Text;
-                                Response.Redirect("~/Template/Dashboard.aspx");
+                                Response.Redirect("~/Template/DashboardPaci.aspx");
                             }
                         }
                         else

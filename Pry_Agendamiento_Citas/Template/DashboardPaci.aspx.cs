@@ -9,10 +9,8 @@ using Capa_Negocio;
 
 namespace Pry_Agendamiento_Citas.Template
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class DashboardPaci : System.Web.UI.Page
     {
-        private static DateTime fchAct = DateTime.Now;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Admin"] != null)
@@ -30,23 +28,6 @@ namespace Pry_Agendamiento_Citas.Template
             else
             {
                 Response.Redirect("~/Login.aspx");
-            }
-
-            if (!IsPostBack)
-            {
-                cargarCitasFchAct();
-            }
-        }
-
-        private void cargarCitasFchAct()
-        {
-            List<Tbl_Cita_Agendada> listapac = new List<Tbl_Cita_Agendada>();
-            listapac = Agendamiento_Log.obtener_citasXfecha(fchAct);
-
-            if (listapac != null)
-            {
-                grv_citas_fchAct.DataSource = listapac;
-                grv_citas_fchAct.DataBind();
             }
         }
     }

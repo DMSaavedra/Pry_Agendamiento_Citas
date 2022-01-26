@@ -33,31 +33,13 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Label lbl_mensaje;
 
         /// <summary>
-        /// Control txt_nombre.
+        /// Control ddl_pacientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_nombre;
-
-        /// <summary>
-        /// Control txt_fechaRT.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_fechaRT;
-
-        /// <summary>
-        /// Control ddl_Especialidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_Especialidad;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_pacientes;
 
         /// <summary>
         /// Control ddl_nom_doc.
@@ -69,6 +51,15 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.DropDownList ddl_nom_doc;
 
         /// <summary>
+        /// Control txt_fechaRT.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_fechaRT;
+
+        /// <summary>
         /// Control txt_horaRT.
         /// </summary>
         /// <remarks>
@@ -76,6 +67,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_horaRT;
+
+        /// <summary>
+        /// Control ddl_Especialidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Especialidad;
 
         /// <summary>
         /// Control btn_Save_Agen.

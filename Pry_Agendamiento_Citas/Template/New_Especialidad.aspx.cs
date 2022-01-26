@@ -57,16 +57,6 @@ namespace Pry_Agendamiento_Citas.Template
 
         private void cargarConsultorios()
         {
-            //List<Tbl_Especialidad> listespc = new List<Tbl_Especialidad>();
-            //listespc = Capa_Negocio.Doctor_Log.obtener_especialidad();
-
-            //listespc.Insert(0, new Tbl_Especialidad() { espc_nombre = "Seleccione" });
-
-            //ddl_especialidad.DataSource = listespc;
-            //ddl_especialidad.DataTextField = "espc_nombre";
-            //ddl_especialidad.DataValueField = "espc_id";
-            //ddl_especialidad.DataBind();
-
             List<Tbl_Consultorio> listconsu = new List<Tbl_Consultorio>();
             listconsu = Capa_Negocio.Consultorio_Log.obtener_consul();
 

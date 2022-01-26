@@ -44,5 +44,16 @@ namespace Capa_Datos.Properties {
                 return ((string)(this["CitasAgendaminentoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-M0HDS4L2\\DBSEGUNDO;Initial Catalog=CitasAgendamiento;Integrate" +
+            "d Security=True")]
+        public string CitasAgendamientoConnectionString {
+            get {
+                return ((string)(this["CitasAgendamientoConnectionString"]));
+            }
+        }
     }
 }

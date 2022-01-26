@@ -22,7 +22,7 @@ namespace Capa_Datos
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CitasAgendaminento")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CitasAgendamiento")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -48,7 +48,7 @@ namespace Capa_Datos
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::Capa_Datos.Properties.Settings.Default.CitasAgendaminentoConnectionString, mappingSource)
+				base(global::Capa_Datos.Properties.Settings.Default.CitasAgendamientoConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -126,17 +126,17 @@ namespace Capa_Datos
 		
 		private int _cagn_id;
 		
+		private string _cagn_paciente;
+		
+		private string _cagn_doctor;
+		
 		private System.Nullable<System.DateTime> _cagn_fechaAgen;
 		
 		private System.Nullable<System.TimeSpan> _cagn_horaAgen;
 		
-		private System.Nullable<int> _espc_id;
-		
 		private System.Nullable<char> _cagn_estado;
 		
-		private string _cagn_doctor;
-		
-		private string _cagn_nombre;
+		private System.Nullable<int> _espc_id;
 		
 		private EntityRef<Tbl_Especialidad> _Tbl_Especialidad;
 		
@@ -146,18 +146,18 @@ namespace Capa_Datos
     partial void OnCreated();
     partial void Oncagn_idChanging(int value);
     partial void Oncagn_idChanged();
+    partial void Oncagn_pacienteChanging(string value);
+    partial void Oncagn_pacienteChanged();
+    partial void Oncagn_doctorChanging(string value);
+    partial void Oncagn_doctorChanged();
     partial void Oncagn_fechaAgenChanging(System.Nullable<System.DateTime> value);
     partial void Oncagn_fechaAgenChanged();
     partial void Oncagn_horaAgenChanging(System.Nullable<System.TimeSpan> value);
     partial void Oncagn_horaAgenChanged();
-    partial void Onespc_idChanging(System.Nullable<int> value);
-    partial void Onespc_idChanged();
     partial void Oncagn_estadoChanging(System.Nullable<char> value);
     partial void Oncagn_estadoChanged();
-    partial void Oncagn_doctorChanging(string value);
-    partial void Oncagn_doctorChanged();
-    partial void Oncagn_nombreChanging(string value);
-    partial void Oncagn_nombreChanged();
+    partial void Onespc_idChanging(System.Nullable<int> value);
+    partial void Onespc_idChanged();
     #endregion
 		
 		public Tbl_Cita_Agendada()
@@ -182,6 +182,46 @@ namespace Capa_Datos
 					this._cagn_id = value;
 					this.SendPropertyChanged("cagn_id");
 					this.Oncagn_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_paciente", DbType="VarChar(100)")]
+		public string cagn_paciente
+		{
+			get
+			{
+				return this._cagn_paciente;
+			}
+			set
+			{
+				if ((this._cagn_paciente != value))
+				{
+					this.Oncagn_pacienteChanging(value);
+					this.SendPropertyChanging();
+					this._cagn_paciente = value;
+					this.SendPropertyChanged("cagn_paciente");
+					this.Oncagn_pacienteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_doctor", DbType="VarChar(100)")]
+		public string cagn_doctor
+		{
+			get
+			{
+				return this._cagn_doctor;
+			}
+			set
+			{
+				if ((this._cagn_doctor != value))
+				{
+					this.Oncagn_doctorChanging(value);
+					this.SendPropertyChanging();
+					this._cagn_doctor = value;
+					this.SendPropertyChanged("cagn_doctor");
+					this.Oncagn_doctorChanged();
 				}
 			}
 		}
@@ -226,30 +266,6 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_espc_id", DbType="Int")]
-		public System.Nullable<int> espc_id
-		{
-			get
-			{
-				return this._espc_id;
-			}
-			set
-			{
-				if ((this._espc_id != value))
-				{
-					if (this._Tbl_Especialidad.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onespc_idChanging(value);
-					this.SendPropertyChanging();
-					this._espc_id = value;
-					this.SendPropertyChanged("espc_id");
-					this.Onespc_idChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_estado", DbType="Char(1)")]
 		public System.Nullable<char> cagn_estado
 		{
@@ -270,42 +286,26 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_doctor", DbType="VarChar(50)")]
-		public string cagn_doctor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_espc_id", DbType="Int")]
+		public System.Nullable<int> espc_id
 		{
 			get
 			{
-				return this._cagn_doctor;
+				return this._espc_id;
 			}
 			set
 			{
-				if ((this._cagn_doctor != value))
+				if ((this._espc_id != value))
 				{
-					this.Oncagn_doctorChanging(value);
+					if (this._Tbl_Especialidad.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onespc_idChanging(value);
 					this.SendPropertyChanging();
-					this._cagn_doctor = value;
-					this.SendPropertyChanged("cagn_doctor");
-					this.Oncagn_doctorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_nombre", DbType="VarChar(50)")]
-		public string cagn_nombre
-		{
-			get
-			{
-				return this._cagn_nombre;
-			}
-			set
-			{
-				if ((this._cagn_nombre != value))
-				{
-					this.Oncagn_nombreChanging(value);
-					this.SendPropertyChanging();
-					this._cagn_nombre = value;
-					this.SendPropertyChanged("cagn_nombre");
-					this.Oncagn_nombreChanged();
+					this._espc_id = value;
+					this.SendPropertyChanged("espc_id");
+					this.Onespc_idChanged();
 				}
 			}
 		}
@@ -1079,7 +1079,7 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_cedula", DbType="VarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_cedula", DbType="VarChar(100)")]
 		public string usu_cedula
 		{
 			get
@@ -1139,7 +1139,7 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_contrasenia", DbType="VarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_contrasenia", DbType="VarChar(100)")]
 		public string usu_contrasenia
 		{
 			get
@@ -1179,7 +1179,7 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_genero", DbType="VarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usu_genero", DbType="VarChar(100)")]
 		public string usu_genero
 		{
 			get

@@ -19,8 +19,8 @@
         <asp:Label ID="lbl_mensaje" runat="server" Text="" ForeColor="Green"></asp:Label>
         <div class="form row">
             <div class="col-md-4 mb-3">
-                  <label for="validationCustom01">Número Consultorio<span class="m-0 font-weight-bold text-danger">*</span></label>
-                        <asp:TextBox ID="txt_numconsul" runat="server" CssClass="form-control" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
+                <label for="validationCustom01">Número Consultorio<span class="m-0 font-weight-bold text-danger">*</span></label>
+                <asp:TextBox ID="txt_numconsul" runat="server" CssClass="form-control" MaxLength="3" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
             </div>
             <div class="col-md-4 mb-3">
                 <label>Imagen</label>
@@ -29,7 +29,7 @@
         </div>
         <br />
         <asp:Button ID="btn_Save_Consul" runat="server" Text="Registrar" CssClass="btn btn-primary" Width="230px" OnClick="btn_Save_Consul_Click" />
-                
-        <asp:Button ID="btn_Modify_Consul" runat="server" Text="Modificar" CssClass="btn btn-warning" Width="230px" OnClick="btn_Modify_Consul_Click" Visible="false"/>
+
+        <asp:Button ID="btn_Modify_Consul" runat="server" Text="Modificar" CssClass="btn btn-warning" Width="230px" OnClick="btn_Modify_Consul_Click" Visible="false" />
     </div>
 </asp:Content>

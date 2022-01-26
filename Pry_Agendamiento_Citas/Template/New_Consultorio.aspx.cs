@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -57,7 +58,7 @@ namespace Pry_Agendamiento_Citas.Template
                 lbl_mensaje.Text = "";
                 consulInfo = new Tbl_Consultorio();
 
-                consulInfo.cons_numero = txt_numconsul.Text;  //No se esta Guardando
+                consulInfo.cons_numero = txt_numconsul.Text; 
 
 
                 Consultorio_Log.saveConsul(consulInfo);
@@ -112,25 +113,32 @@ namespace Pry_Agendamiento_Citas.Template
 
         protected void btn_Save_Consul_Click(object sender, EventArgs e)
         {
-
-            lbl_mensaje.Visible = false;
-            bool existe = Consultorio_Log.autentificar_consul(txt_numconsul.Text);
+            if (string.IsNullOrEmpty(txt_numconsul.Text))
             {
-                if (existe)
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Llenar todos los Campos!!";
+            }
+            else
+            {
+                lbl_mensaje.Visible = false;
+                bool existe = Consultorio_Log.autentificar_consul(txt_numconsul.Text);
                 {
-                    Tbl_Consultorio consul = new Tbl_Consultorio();
-                    consul = Consultorio_Log.obtener_consul_xnum(txt_numconsul.Text);
-
-                    if (consul != null)
+                    if (existe)
                     {
-                        lbl_mensaje.Visible = true;
-                        lbl_mensaje.Text = "Paciente Existente...";
+                        Tbl_Consultorio consul = new Tbl_Consultorio();
+                        consul = Consultorio_Log.obtener_consul_xnum(txt_numconsul.Text);
+
+                        if (consul != null)
+                        {
+                            lbl_mensaje.Visible = true;
+                            lbl_mensaje.Text = "Paciente Existente...";
+                        }
                     }
-                }
-                else
-                {
-                    lbl_mensaje.Visible = false;
-                    guardar_modificar_datos_consul(Convert.ToInt32(Request["cod"]));
+                    else
+                    {
+                        lbl_mensaje.Visible = false;
+                        guardar_modificar_datos_consul(Convert.ToInt32(Request["cod"]));
+                    }
                 }
             }
         }

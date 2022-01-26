@@ -51,15 +51,6 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Button btn_Cerrar_Session;
 
         /// <summary>
-        /// Control lnk_Inicio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_Inicio;
-
-        /// <summary>
         /// Control Panel1.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
+
+        /// <summary>
+        /// Control lnk_Inicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_Inicio;
 
         /// <summary>
         /// Control lnk_Usuarios_Adm.
@@ -132,24 +132,6 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_List_Especialidad;
 
         /// <summary>
-        /// Control lnk_agendamiento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_agendamiento;
-
-        /// <summary>
-        /// Control lnk_List_Agendamiento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnk_List_Agendamiento;
-
-        /// <summary>
         /// Control lnk_consultorio.
         /// </summary>
         /// <remarks>
@@ -168,6 +150,24 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.LinkButton lnk_List_Consultorio;
 
         /// <summary>
+        /// Control lnk_agendamiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_agendamiento;
+
+        /// <summary>
+        /// Control lnk_List_Agendamiento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_List_Agendamiento;
+
+        /// <summary>
         /// Control Panel2.
         /// </summary>
         /// <remarks>
@@ -175,6 +175,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel2;
+
+        /// <summary>
+        /// Control lnk_inicio_docs.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnk_inicio_docs;
 
         /// <summary>
         /// Control lnk_Agendamiento_Doc.

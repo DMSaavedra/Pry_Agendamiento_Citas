@@ -103,5 +103,10 @@ namespace Pry_Agendamiento_Citas.Template
             Response.Redirect("~/Template/List_Administrador.aspx");
 
         }
+
+        protected void lnk_inicio_docs_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/Dashboard.aspx");
+        }
     }
 }

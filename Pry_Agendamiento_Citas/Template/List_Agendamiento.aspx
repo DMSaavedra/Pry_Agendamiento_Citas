@@ -36,38 +36,33 @@
                             <ItemTemplate>
                                 <asp:Label ID="cagn_id" runat="server" Text='<%#Eval("cagn_id") %>'></asp:Label>
                             </ItemTemplate>
-                            <ItemStyle Width="1cm" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="NOMBRE Y APELLIDO" ItemStyle-Width="5cm">
                             <ItemTemplate>
-                                <asp:Label ID="cagn_nombre" runat="server" Text='<%#Eval("cagn_nombre") %>'></asp:Label>
+                                <asp:Label ID="cagn_nombre" runat="server" Text='<%#Eval("cagn_paciente") %>'></asp:Label>
                             </ItemTemplate>
-                            <ItemStyle Width="5cm" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="DOCTOR" ItemStyle-Width="2cm">
-                            <ItemTemplate>
-                                <asp:Label ID="cagn_doctor" runat="server" Text='<%#Eval("cagn_doctor") %>'></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle Width="2cm" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="ESPECIALIDAD" ItemStyle-Width="2cm">
-                            <ItemTemplate>
-                                <asp:Label ID="espc_id" runat="server" Text='<%#Eval("espc_id") %>'></asp:Label>
-                            </ItemTemplate>
-                            <ItemStyle Width="2cm" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="FECHA CITA MEDICA" ItemStyle-Width="3cm">
                             <ItemTemplate>
                                 <asp:Label ID="cagn_fechaAgen" runat="server" Text='<%#Eval("cagn_fechaAgen") %>'></asp:Label>
                             </ItemTemplate>
-                            <ItemStyle Width="3cm" />
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="HORA CITA MEDICA" ItemStyle-Width="4cm">
                             <ItemTemplate>
                                 <asp:Label ID="cagn_horaAgen" runat="server" Text='<%#Eval("cagn_horaAgen") %>'></asp:Label>
                             </ItemTemplate>
-                            <ItemStyle Width="4cm" />
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="DOCTOR" ItemStyle-Width="2cm">
+                            <ItemTemplate>
+                                <asp:Label ID="cagn_doctor" runat="server" Text='<%#Eval("cagn_doctor") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="ESPECIALIDAD" ItemStyle-Width="2cm">
+                            <ItemTemplate>
+                                <asp:Label ID="espc_id" runat="server" Text='<%#Eval("espc_id") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        
                     </Columns>
                 </asp:GridView>
             </div>

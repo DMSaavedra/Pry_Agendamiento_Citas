@@ -7,7 +7,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamiento Citas</title>
+    <title>Agendamiento Citas</title> 
+
+    <!--Icono de la Ventana-->
+<%--    <link rel="icon" type="icon/png" href="https://cdn-icons-png.flaticon.com/512/1314/1314645.png">--%>
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="imagenes/Logo.svg" type="image/x-icon">
     <!-- Custom styles -->

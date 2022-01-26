@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -41,18 +42,59 @@ namespace Pry_Agendamiento_Citas.Template
 
                     if (citaInfo != null)
                     {
-                        txt_nombre.Text = citaInfo.cagn_nombre.ToString();
-
-
-
+                        ddl_pacientes.SelectedValue = citaInfo.cagn_paciente.ToString();
+                        ddl_nom_doc.SelectedValue = citaInfo.cagn_doctor.ToString();
+                        txt_fechaRT.Text = citaInfo.cagn_fechaAgen.ToString();
+                        //txt_nombre.Text = citaInfo.cagn_paciente.ToString();
 
                         ddl_Especialidad.SelectedValue = citaInfo.espc_id.ToString();
-                        ddl_nom_doc.SelectedValue = citaInfo.cagn_doctor.ToString();
 
                         btn_Save_Agen.Visible = false;
                     }
                 }
+                cargarPacientes();
+                cargarDoctores();
+                cargarEspecialidades();
             }
+        }
+
+        private void cargarDoctores()
+        {
+            List<Tbl_Usuario> listapac = new List<Tbl_Usuario>();
+            listapac = Capa_Negocio.Usuario_Log.obtener_usu_medicos();
+
+            listapac.Insert(0, new Tbl_Usuario() { usu_apellido_nombre = "Seleccione" });
+
+            ddl_nom_doc.DataSource = listapac;
+            ddl_nom_doc.DataTextField = "usu_apellido_nombre";
+            ddl_nom_doc.DataValueField = "usu_apellido_nombre";
+            ddl_nom_doc.DataBind();
+        }
+
+        private void cargarEspecialidades()
+        {
+            List<Tbl_Especialidad> listespc = new List<Tbl_Especialidad>();
+            listespc = Capa_Negocio.Doctor_Log.obtener_especialidad();
+
+            listespc.Insert(0, new Tbl_Especialidad() { espc_nombre = "Seleccione" });
+
+            ddl_Especialidad.DataSource = listespc;
+            ddl_Especialidad.DataTextField = "espc_nombre";
+            ddl_Especialidad.DataValueField = "espc_id";
+            ddl_Especialidad.DataBind();
+        }
+
+        private void cargarPacientes()
+        {
+            List<Tbl_Usuario> listapac = new List<Tbl_Usuario>();
+            listapac = Capa_Negocio.Usuario_Log.obtener_usu_paciente();
+
+            listapac.Insert(0, new Tbl_Usuario() { usu_apellido_nombre = "Seleccione" });
+
+            ddl_pacientes.DataSource = listapac;
+            ddl_pacientes.DataTextField = "usu_apellido_nombre";
+            ddl_pacientes.DataValueField = "usu_apellido_nombre";
+            ddl_pacientes.DataBind();
         }
 
         private void guardar()
@@ -62,10 +104,11 @@ namespace Pry_Agendamiento_Citas.Template
                 lbl_mensaje.Text = "";
                 citaInfo = new Tbl_Cita_Agendada();
 
-                citaInfo.cagn_nombre = txt_nombre.Text;  //No se esta Guardando
-
+                citaInfo.cagn_paciente = ddl_pacientes.SelectedValue;
+                citaInfo.cagn_doctor = (ddl_nom_doc.SelectedValue);
+                citaInfo.cagn_fechaAgen = Convert.ToDateTime(txt_fechaRT.Text);
+                //citaInfo.cagn_horaAgen = TimeSpan(txt_horaRT.Text);
                 citaInfo.espc_id = Convert.ToInt32(ddl_Especialidad.SelectedValue);
-                citaInfo.cagn_doctor = (ddl_Especialidad.SelectedValue);
 
                 Agendamiento_Log.saveAgen(citaInfo);
 
@@ -85,10 +128,10 @@ namespace Pry_Agendamiento_Citas.Template
             {
                 lbl_mensaje.Text = "";
 
-                agenmodf.cagn_nombre = txt_nombre.Text;
+                agenmodf.cagn_paciente = ddl_pacientes.SelectedValue;
+                agenmodf.cagn_doctor = ddl_nom_doc.SelectedValue;
+                agenmodf.cagn_fechaAgen = Convert.ToDateTime(txt_fechaRT.Text);
                 agenmodf.espc_id = Convert.ToInt32(ddl_Especialidad.SelectedValue);
-
-                agenmodf.cagn_doctor = (ddl_Especialidad.SelectedValue);
 
                 Agendamiento_Log.modifyAgen(agenmodf);
 
@@ -122,24 +165,42 @@ namespace Pry_Agendamiento_Citas.Template
 
         protected void btn_Save_Agen_Click(object sender, EventArgs e)
         {
-            lbl_mensaje.Visible = false;
-            bool existe = Agendamiento_Log.autentificar_agen(txt_nombre.Text);
+            if (ddl_pacientes.SelectedIndex == 0)
             {
-                if (existe)
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Paciente";
+            }
+            else if (ddl_nom_doc.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Doctor";
+            }
+            else if (ddl_Especialidad.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar una Especialidad";
+            }
+            else
+            {
+                lbl_mensaje.Visible = false;
+                bool existe = Agendamiento_Log.autentificar_agen(ddl_pacientes.SelectedValue);
                 {
-                    Tbl_Cita_Agendada paci = new Tbl_Cita_Agendada();
-                    paci = Agendamiento_Log.obtener_agen_xnom(txt_nombre.Text);
-
-                    if (paci != null)
+                    if (existe)
                     {
-                        lbl_mensaje.Visible = true;
-                        lbl_mensaje.Text = "Agendamiento Existente...";
+                        Tbl_Cita_Agendada paci = new Tbl_Cita_Agendada();
+                        paci = Agendamiento_Log.obtener_agen_xnom(ddl_pacientes.SelectedValue);
+
+                        if (paci != null)
+                        {
+                            lbl_mensaje.Visible = true;
+                            lbl_mensaje.Text = "Agendamiento Existente...";
+                        }
                     }
-                }
-                else
-                {
-                    lbl_mensaje.Visible = false;
-                    guardar_modificar_datos_agen(Convert.ToInt32(Request["cod"]));
+                    else
+                    {
+                        lbl_mensaje.Visible = false;
+                        guardar_modificar_datos_agen(Convert.ToInt32(Request["cod"]));
+                    }
                 }
             }
         }
