@@ -2,62 +2,62 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 8.5" name="DataClasses1">
   <DataContextMoniker Name="/DataClasses1DataContext" />
   <nestedChildShapes>
-    <classShape Id="298c5f78-eaac-4a5f-8c67-7968e7081da3" absoluteBounds="9.25, 2.875, 2, 3.1170068359375005">
-      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Usuario" />
-      <nestedChildShapes>
-        <elementListCompartment Id="57109949-a9ba-4137-bdf8-dbb464dfc0f7" absoluteBounds="9.265, 3.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="90f72b1f-daad-49a7-bdb1-de93aff88d04" absoluteBounds="6.5, 0.75, 2, 1.3862939453125">
-      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Tipo_Usuario" />
-      <nestedChildShapes>
-        <elementListCompartment Id="dab385fd-c853-4453-be88-2eca3126692e" absoluteBounds="6.515, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="4cdccde9-08fe-4acf-a67d-19f35468b3c1" absoluteBounds="3.5, 3.5, 2, 1.9631982421875005">
-      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Especialidad" />
-      <nestedChildShapes>
-        <elementListCompartment Id="60d2659d-37ff-4056-a268-63e74a73bb88" absoluteBounds="3.515, 3.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="9624f43c-9768-471c-979f-2b1f7f69b2f7" absoluteBounds="0.75, 3.625, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Consultorio" />
-      <nestedChildShapes>
-        <elementListCompartment Id="01d9fce5-0bd4-49e6-85b5-a7ee285b3c2d" absoluteBounds="0.765, 4.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="a2686b6a-221f-4746-992f-5f64887c3ca0" absoluteBounds="6.25, 3.375, 2, 2.1554996744791666">
+    <classShape Id="570342c9-fd4c-4127-89d9-4b8ef1e7fc5f" absoluteBounds="6.25, 3.375, 2, 2.1554996744791666">
       <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Cita_Agendada" />
       <nestedChildShapes>
-        <elementListCompartment Id="cc2db66b-9aa4-475e-90a6-1e6d493dbead" absoluteBounds="6.265, 3.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c9064d2b-1f49-4053-9090-8ea66f8d3960" absoluteBounds="6.265, 3.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.40625 : 2.1362939453125); (8.40625 : 3.09375); (9.25 : 3.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Tipo_Usuario/Tbl_Tipo_Usuario_Tbl_Usuario" />
+    <classShape Id="aaf8ab29-9ca9-4a6f-9ff4-c073347c3894" absoluteBounds="0.75, 3.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Consultorio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7ac2635-daca-480d-b57a-23ba1c07ac06" absoluteBounds="0.765, 4.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a826996-a576-4638-a63d-8473ca3bffd9" absoluteBounds="3.5, 3.5, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Especialidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8da2753-269e-42fb-9f18-2811a552f717" absoluteBounds="3.515, 3.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="75d9193d-5612-4c20-81e3-f63ea02d661e" absoluteBounds="6.5, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Tipo_Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c87f1562-80f6-4fa6-8c7c-de88bd741e6a" absoluteBounds="6.515, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48ab86cd-1f92-4f3e-89a6-f81e9540d512" absoluteBounds="9.25, 2.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DataClasses1DataContext/Tbl_Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95094e54-87b9-438b-b808-8e18a81b0a06" absoluteBounds="9.265, 3.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.48159912109375); (6.25 : 4.48159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Especialidad/Tbl_Especialidad_Tbl_Cita_Agendada" />
       <nodes>
-        <classShapeMoniker Id="90f72b1f-daad-49a7-bdb1-de93aff88d04" />
-        <classShapeMoniker Id="298c5f78-eaac-4a5f-8c67-7968e7081da3" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 5.4631982421875); (4.5 : 5.79250325520833); (9.25 : 5.79250325520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Especialidad/Tbl_Especialidad_Tbl_Usuario" />
-      <nodes>
-        <classShapeMoniker Id="4cdccde9-08fe-4acf-a67d-19f35468b3c1" />
-        <classShapeMoniker Id="298c5f78-eaac-4a5f-8c67-7968e7081da3" />
+        <classShapeMoniker Id="8a826996-a576-4638-a63d-8473ca3bffd9" />
+        <classShapeMoniker Id="570342c9-fd4c-4127-89d9-4b8ef1e7fc5f" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 4.41429768880208); (3.5 : 4.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Consultorio/Tbl_Consultorio_Tbl_Especialidad" />
       <nodes>
-        <classShapeMoniker Id="9624f43c-9768-471c-979f-2b1f7f69b2f7" />
-        <classShapeMoniker Id="4cdccde9-08fe-4acf-a67d-19f35468b3c1" />
+        <classShapeMoniker Id="aaf8ab29-9ca9-4a6f-9ff4-c073347c3894" />
+        <classShapeMoniker Id="8a826996-a576-4638-a63d-8473ca3bffd9" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.48159912109375); (6.25 : 4.48159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Especialidad/Tbl_Especialidad_Tbl_Cita_Agendada" />
+    <associationConnector edgePoints="[(4.5 : 5.4631982421875); (4.5 : 5.82615397135417); (9.25 : 5.82615397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Especialidad/Tbl_Especialidad_Tbl_Usuario" />
       <nodes>
-        <classShapeMoniker Id="4cdccde9-08fe-4acf-a67d-19f35468b3c1" />
-        <classShapeMoniker Id="a2686b6a-221f-4746-992f-5f64887c3ca0" />
+        <classShapeMoniker Id="8a826996-a576-4638-a63d-8473ca3bffd9" />
+        <classShapeMoniker Id="48ab86cd-1f92-4f3e-89a6-f81e9540d512" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 1.44314697265625); (10.25 : 1.44314697265625); (10.25 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Tbl_Tipo_Usuario/Tbl_Tipo_Usuario_Tbl_Usuario" />
+      <nodes>
+        <classShapeMoniker Id="75d9193d-5612-4c20-81e3-f63ea02d661e" />
+        <classShapeMoniker Id="48ab86cd-1f92-4f3e-89a6-f81e9540d512" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

@@ -60,6 +60,15 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.DropDownList ddl_edad;
 
         /// <summary>
+        /// Control ddl_consultorio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_consultorio;
+
+        /// <summary>
         /// Control btn_Save_Pac.
         /// </summary>
         /// <remarks>

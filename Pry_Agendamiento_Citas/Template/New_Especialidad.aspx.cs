@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -45,12 +46,38 @@ namespace Pry_Agendamiento_Citas.Template
                         txt_despecialidad.Text = espeInfo.espc_descripcion.ToString();
 
                         ddl_edad.SelectedValue = espeInfo.espc_edad_dirg.ToString();
+                        ddl_consultorio.SelectedValue = espeInfo.cons_id.ToString();
 
                         btn_Save_Pac.Visible = false;
                     }
                 }
+                cargarConsultorios();
             }
         }
+
+        private void cargarConsultorios()
+        {
+            //List<Tbl_Especialidad> listespc = new List<Tbl_Especialidad>();
+            //listespc = Capa_Negocio.Doctor_Log.obtener_especialidad();
+
+            //listespc.Insert(0, new Tbl_Especialidad() { espc_nombre = "Seleccione" });
+
+            //ddl_especialidad.DataSource = listespc;
+            //ddl_especialidad.DataTextField = "espc_nombre";
+            //ddl_especialidad.DataValueField = "espc_id";
+            //ddl_especialidad.DataBind();
+
+            List<Tbl_Consultorio> listconsu = new List<Tbl_Consultorio>();
+            listconsu = Capa_Negocio.Consultorio_Log.obtener_consul();
+
+            listconsu.Insert(0, new Tbl_Consultorio() { cons_numero = "Seleccione" });
+
+            ddl_consultorio.DataSource = listconsu;
+            ddl_consultorio.DataTextField = "cons_numero";
+            ddl_consultorio.DataValueField = "cons_id";
+            ddl_consultorio.DataBind();
+        }
+
         private void guardar()
         {
             try
@@ -58,11 +85,12 @@ namespace Pry_Agendamiento_Citas.Template
                 lbl_mensaje.Text = "";
                 espeInfo = new Tbl_Especialidad();
 
-                espeInfo.espc_nombre = txt_especialidad.Text;  //No se esta Guardando
+                espeInfo.espc_nombre = txt_especialidad.Text;  
                 espeInfo.espc_descripcion = txt_despecialidad.Text;
 
 
                 espeInfo.espc_edad_dirg = Convert.ToInt32(ddl_edad.SelectedValue);
+                espeInfo.cons_id = Convert.ToInt32(ddl_consultorio.SelectedValue);
 
 
                 Especialidad_Log.saveEspe(espeInfo);
@@ -73,7 +101,7 @@ namespace Pry_Agendamiento_Citas.Template
             catch (Exception ex)
             {
                 lbl_mensaje.Visible = true;
-                lbl_mensaje.Text = "Los Datos NO se han guardado! NewP";
+                lbl_mensaje.Text = "Los Datos NO se han guardado!";
             }
         }
         private void modificar(Tbl_Especialidad espemodf)
@@ -85,6 +113,7 @@ namespace Pry_Agendamiento_Citas.Template
                 espemodf.espc_nombre = txt_especialidad.Text;
                 espemodf.espc_descripcion = txt_despecialidad.Text;
                 espemodf.espc_edad_dirg = Convert.ToInt32(ddl_edad.SelectedValue);
+                espemodf.cons_id = Convert.ToInt32(ddl_consultorio.SelectedValue);
 
 
                 Especialidad_Log.modifyEspe(espemodf);
@@ -117,24 +146,43 @@ namespace Pry_Agendamiento_Citas.Template
         }
         protected void btn_Save_Pac_Click(object sender, EventArgs e)
         {
-            lbl_mensaje.Visible = false;
-            bool existe = Especialidad_Log.autentificar_espe(txt_especialidad.Text);
+            if (string.IsNullOrEmpty(txt_especialidad.Text) || string.IsNullOrEmpty(txt_despecialidad.Text))
             {
-                if (existe)
-                {
-                    Tbl_Especialidad espe = new Tbl_Especialidad();
-                    espe = Especialidad_Log.obtener_espe_xnom(txt_especialidad.Text);
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Llenar todos los Campos!!";
+            }
+            else if (ddl_edad.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Rango de Edad";
+            }
+            else if (ddl_consultorio.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Numero de Consultorio";
+            }
+            else
+            {
 
-                    if (espe != null)
-                    {
-                        lbl_mensaje.Visible = true;
-                        lbl_mensaje.Text = "Especialidad Existente...";
-                    }
-                }
-                else
+                lbl_mensaje.Visible = false;
+                bool existe = Especialidad_Log.autentificar_espe(txt_especialidad.Text);
                 {
-                    lbl_mensaje.Visible = false;
-                    guardar_modificar_datos_espe(Convert.ToInt32(Request["cod"]));
+                    if (existe)
+                    {
+                        Tbl_Especialidad espe = new Tbl_Especialidad();
+                        espe = Especialidad_Log.obtener_espe_xnom(txt_especialidad.Text);
+
+                        if (espe != null)
+                        {
+                            lbl_mensaje.Visible = true;
+                            lbl_mensaje.Text = "Especialidad Existente...";
+                        }
+                    }
+                    else
+                    {
+                        lbl_mensaje.Visible = false;
+                        guardar_modificar_datos_espe(Convert.ToInt32(Request["cod"]));
+                    }
                 }
             }
         }

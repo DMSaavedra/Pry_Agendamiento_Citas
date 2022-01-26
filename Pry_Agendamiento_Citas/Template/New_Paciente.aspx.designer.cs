@@ -96,6 +96,15 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.TextBox txt_User;
 
         /// <summary>
+        /// Control txt_passw.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_passw;
+
+        /// <summary>
         /// Control ddl_genero.
         /// </summary>
         /// <remarks>

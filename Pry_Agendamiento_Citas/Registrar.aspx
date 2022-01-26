@@ -27,11 +27,11 @@
                     <ContentTemplate>
                         <label class="form-label-wrapper">
                             <p class="form-label">Apellido y Nombre</p>
-                            <asp:TextBox ID="txt_nombapell" class="form-input" runat="server" placeholder="Ingrese un Apellido y un Nombre" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
+                            <asp:TextBox ID="txt_nombapell" class="form-input" runat="server" placeholder="Ingrese un Apellido y un Nombre" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" onKeypress="if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122)) event.returnValue = false;"></asp:TextBox>
                         </label>
                         <label class="form-label-wrapper">
                             <p class="form-label">Cédula</p>
-                            <asp:TextBox ID="txt_ced" class="form-input" placeholder="Ingrese su cédula" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_ced" class="form-input" placeholder="Ingrese su cédula" runat="server" MaxLength="10" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
                         </label>
                         <label class="form-label-wrapper">
                             <p class="form-label">Correo</p>
@@ -39,10 +39,14 @@
                         </label>
                         <label class="form-label-wrapper">
                             <p class="form-label">Usuario</p>
-                            <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese un usuario" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese un usuario" runat="server" MaxLength="10" onKeypress="if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122)) event.returnValue = false;"></asp:TextBox>
+                        </label>
+                        <label class="form-label-wrapper">
+                            <p class="form-label">Contraseña</p>
+                            <asp:TextBox ID="txt_contrasenia" runat="server" class="form-input" TextMode="Password" placeholder="Ingrese una Contraseña NUMERICA" MaxLength="6" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
                         </label>
                         <br />
-                        <asp:Button ID="btn_registrar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Registrar" OnClick="btn_registrar_Click"/>
+                        <asp:Button ID="btn_registrar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Registrar" OnClick="btn_registrar_Click" />
                         <br />
                         <br />
                         <asp:LinkButton ID="lnk_Cancelar" class="link-info" runat="server" OnClick="lnk_Cancelar_Click">Cancelar</asp:LinkButton>

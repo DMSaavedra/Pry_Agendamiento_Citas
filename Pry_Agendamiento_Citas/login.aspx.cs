@@ -105,23 +105,29 @@ namespace Pry_Agendamiento_Citas
         protected void lnk_olvido_Click(object sender, EventArgs e)
         {
             btn_recuperar.Visible = true;
+
+            txt_usuario.Visible = false;
             txt_password.Visible = false;
             Label2.Visible = false;
+            Label3.Visible = false;
+
             lbl_mensaje.Text = "";
 
             lnk_olvido.Visible = false;
             lnk_Registro.Visible = false;
 
-            txt_usuario.Text = "";
+            Label4.Visible = true;
+            txt_cedula.Visible = true;
+            //txt_usuario.Text = "";
             lnk_Cancelar.Visible = true;
-            Label3.Text = "Cedula";
+            //Label3.Text = "Cedula";
         }
 
         protected void btn_recuperar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_usuario.Text))
             {
-                lbl_mensaje.Text = "Ingrese su CEDULA para el proceso de recuperacion!";
+                lbl_mensaje.Text = "Ingrese su CEDULA!!";
             }
             else
             {
@@ -147,7 +153,7 @@ namespace Pry_Agendamiento_Citas
                         string from = "asistenciatecnica067@gmail.com";
                         string pass = "ansii12345@@";
                         string to = usu.usu_correo;
-                        string sms = "Su Credenciales son: "+usu.usu_nomLogin+" y la contraseña para ingresar al sistema es: "+usu.usu_cedula;
+                        string sms = "Su Credenciales son Usuario: "+usu.usu_nomLogin+" y contraseña es: "+usu.usu_contrasenia+". Ingrese al Sistema con las Credenciales Recuperadas. ";
 
                         if (new EmailRecuperacion().enviarcorreo(from,pass,to,sms))
                         {
@@ -172,8 +178,14 @@ namespace Pry_Agendamiento_Citas
         protected void lnk_Cancelar_Click(object sender, EventArgs e)
         {
             btn_recuperar.Visible = false;
-            txt_password.Visible = true;
+            Label4.Visible = false;
+            txt_cedula.Visible = false;
+
+            Label3.Visible = true;
+            txt_usuario.Visible = true;
             Label2.Visible = true;
+            txt_password.Visible = true;
+
             btn_ingresar.Visible = true;
             lnk_olvido.Visible = false;
 
@@ -183,14 +195,19 @@ namespace Pry_Agendamiento_Citas
             lnk_Registro.Visible = true;
 
             lbl_mensaje.Text = "";
-            Label3.Text = "Usuario";
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
             btn_recuperar.Visible = false;
-            txt_password.Visible = true;
+            Label4.Visible = false;
+            txt_cedula.Visible = false;
+
+            Label3.Visible = true;
+            txt_usuario.Visible = true;
             Label2.Visible = true;
+            txt_password.Visible = true;
+
             btn_ingresar.Visible = true;
             lnk_olvido.Visible = false;
 

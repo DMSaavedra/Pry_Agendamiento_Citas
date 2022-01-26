@@ -1,42 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CitasAgendaminento" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-M0HDS4L2\DBSEGUNDO;Initial Catalog=CitasAgendaminento;Integrated Security=True" SettingsObjectName="Capa_Datos.Properties.Settings" SettingsPropertyName="CitasAgendaminentoConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Tbl_Usuario" Member="Tbl_Usuario">
-    <Type Name="Tbl_Usuario">
-      <Column Name="usu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="usu_apellido_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="usu_edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="usu_cedula" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="usu_telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="usu_nomLogin" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="usu_grupo_sanguineo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="usu_genero" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="usu_correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="usu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
-      <Column Name="tusu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+  <Table Name="dbo.Tbl_Cita_Agendada" Member="Tbl_Cita_Agendada">
+    <Type Name="Tbl_Cita_Agendada">
+      <Column Name="cagn_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cagn_fechaAgen" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cagn_horaAgen" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
       <Column Name="espc_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Tbl_Tipo_Usuario_Tbl_Usuario" Member="Tbl_Tipo_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Tipo_Usuario" IsForeignKey="true" />
-      <Association Name="Tbl_Especialidad_Tbl_Usuario" Member="Tbl_Especialidad" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Especialidad" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_Tipo_Usuario" Member="Tbl_Tipo_Usuario">
-    <Type Name="Tbl_Tipo_Usuario">
-      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tusu_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="tusu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
-      <Association Name="Tbl_Tipo_Usuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Usuario" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_Especialidad" Member="Tbl_Especialidad">
-    <Type Name="Tbl_Especialidad">
-      <Column Name="espc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="espc_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="espc_descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="espc_edad_dirg" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="espc_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
-      <Column Name="cons_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Tbl_Especialidad_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Usuario" />
-      <Association Name="Tbl_Especialidad_Tbl_Cita_Agendada" Member="Tbl_Cita_Agendada" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Cita_Agendada" />
-      <Association Name="Tbl_Consultorio_Tbl_Especialidad" Member="Tbl_Consultorio" ThisKey="cons_id" OtherKey="cons_id" Type="Tbl_Consultorio" IsForeignKey="true" />
+      <Column Name="cagn_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="cagn_doctor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cagn_nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Tbl_Especialidad_Tbl_Cita_Agendada" Member="Tbl_Especialidad" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Especialidad" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_Consultorio" Member="Tbl_Consultorio">
@@ -48,16 +21,44 @@
       <Association Name="Tbl_Consultorio_Tbl_Especialidad" Member="Tbl_Especialidad" ThisKey="cons_id" OtherKey="cons_id" Type="Tbl_Especialidad" />
     </Type>
   </Table>
-  <Table Name="dbo.Tbl_Cita_Agendada" Member="Tbl_Cita_Agendada">
-    <Type Name="Tbl_Cita_Agendada">
-      <Column Name="cagn_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="cagn_fechaAgen" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="cagn_horaAgen" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+  <Table Name="dbo.Tbl_Especialidad" Member="Tbl_Especialidad">
+    <Type Name="Tbl_Especialidad">
+      <Column Name="espc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="espc_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="espc_descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="espc_edad_dirg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="espc_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="cons_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_Especialidad_Tbl_Cita_Agendada" Member="Tbl_Cita_Agendada" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Cita_Agendada" />
+      <Association Name="Tbl_Especialidad_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Usuario" />
+      <Association Name="Tbl_Consultorio_Tbl_Especialidad" Member="Tbl_Consultorio" ThisKey="cons_id" OtherKey="cons_id" Type="Tbl_Consultorio" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Tipo_Usuario" Member="Tbl_Tipo_Usuario">
+    <Type Name="Tbl_Tipo_Usuario">
+      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tusu_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tusu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="Tbl_Tipo_Usuario_Tbl_Usuario" Member="Tbl_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Usuario" Member="Tbl_Usuario">
+    <Type Name="Tbl_Usuario">
+      <Column Name="usu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usu_apellido_nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="usu_edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usu_cedula" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="usu_telefono" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="usu_nomLogin" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="usu_contrasenia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="usu_grupo_sanguineo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usu_genero" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="usu_correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="usu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tusu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="espc_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="cagn_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
-      <Column Name="cagn_doctor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="cagn_nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Tbl_Especialidad_Tbl_Cita_Agendada" Member="Tbl_Especialidad" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Especialidad" IsForeignKey="true" />
+      <Association Name="Tbl_Especialidad_Tbl_Usuario" Member="Tbl_Especialidad" ThisKey="espc_id" OtherKey="espc_id" Type="Tbl_Especialidad" IsForeignKey="true" />
+      <Association Name="Tbl_Tipo_Usuario_Tbl_Usuario" Member="Tbl_Tipo_Usuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Tipo_Usuario" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

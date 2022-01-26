@@ -31,28 +31,39 @@ namespace Pry_Agendamiento_Citas
 
         protected void btn_registrar_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrEmpty(txt_nombapell.Text) || string.IsNullOrEmpty(txt_ced.Text) || string.IsNullOrEmpty(txt_correo.Text) ||
+                string.IsNullOrEmpty(txt_usuario.Text) || string.IsNullOrEmpty(txt_contrasenia.Text))
             {
-                lbl_mensaje.Text = "";
-                usuinfo = new Tbl_Usuario();
-
-                usuinfo.usu_apellido_nombre = txt_nombapell.Text;
-                usuinfo.usu_cedula = Convert.ToInt32(txt_ced.Text);
-                usuinfo.usu_correo = txt_correo.Text;
-                usuinfo.usu_nomLogin = txt_usuario.Text;
-
-                Usuario_Log.saveInfoAdmin(usuinfo);
-
-                lbl_mensaje.ForeColor = Color.Green;
-                lbl_mensaje.Text = "Datos Guardados con Exito!!";
-
-                Timer1.Enabled = true;
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Llenar todos los Campos!!";
             }
-            catch (Exception)
+            else
             {
-                lbl_mensaje.ForeColor = Color.Red;
-                lbl_mensaje.Text = "Datos NO Guardados!";
-                throw;
+                try
+                {
+                    lbl_mensaje.Text = "";
+                    usuinfo = new Tbl_Usuario();
+
+                    usuinfo.usu_apellido_nombre = txt_nombapell.Text;
+                    usuinfo.usu_cedula = txt_ced.Text;
+                    usuinfo.usu_correo = txt_correo.Text;
+                    usuinfo.usu_nomLogin = txt_usuario.Text;
+                    usuinfo.usu_contrasenia = txt_contrasenia.Text;
+
+
+                    Usuario_Log.saveInfoAdmin(usuinfo);
+
+                    lbl_mensaje.ForeColor = Color.Green;
+                    lbl_mensaje.Text = "Datos Guardados con Exito!!";
+
+                    Timer1.Enabled = true;
+                }
+                catch (Exception)
+                {
+                    lbl_mensaje.ForeColor = Color.Red;
+                    lbl_mensaje.Text = "Datos NO Guardados!";
+                    throw;
+                }
             }
         }
     }

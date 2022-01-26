@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -48,6 +49,7 @@ namespace Pry_Agendamiento_Citas.Template
                         txt_cedula.Text = medicInfo.usu_cedula.ToString();
                         txt_telef.Text = medicInfo.usu_telefono.ToString();
                         txt_User.Text = medicInfo.usu_nomLogin.ToString();
+                        txt_passw.Text = medicInfo.usu_contrasenia.ToString();
 
                         ddl_genero.SelectedValue = medicInfo.usu_genero.ToString();
                         ddl_grup_sangre.SelectedValue = medicInfo.usu_grupo_sanguineo.ToString();
@@ -85,9 +87,10 @@ namespace Pry_Agendamiento_Citas.Template
 
                 medicInfo.usu_apellido_nombre = txt_Aps_Noms.Text;  
                 medicInfo.usu_edad = Convert.ToInt32(txt_Edad.Text);
-                medicInfo.usu_cedula = Convert.ToInt32(txt_cedula.Text);
+                medicInfo.usu_cedula = txt_cedula.Text;
                 medicInfo.usu_telefono = txt_telef.Text;
                 medicInfo.usu_nomLogin = txt_User.Text;
+                medicInfo.usu_contrasenia = txt_passw.Text;
                 medicInfo.usu_grupo_sanguineo = Convert.ToInt32(ddl_grup_sangre.SelectedValue);
                 medicInfo.usu_genero = ddl_genero.SelectedValue;
                 medicInfo.usu_correo = txt_email.Text;
@@ -114,9 +117,10 @@ namespace Pry_Agendamiento_Citas.Template
 
                 medimodf.usu_apellido_nombre = txt_Aps_Noms.Text;
                 medimodf.usu_edad = Convert.ToInt32(txt_Edad.Text);
-                medimodf.usu_cedula = Convert.ToInt32(txt_cedula.Text);
+                medimodf.usu_cedula = txt_cedula.Text;
                 medimodf.usu_telefono = txt_telef.Text;
                 medimodf.usu_nomLogin = txt_User.Text;
+                medimodf.usu_contrasenia = txt_passw.Text;
                 medimodf.usu_grupo_sanguineo = Convert.ToInt32(ddl_grup_sangre.SelectedValue);
                 medimodf.usu_genero = ddl_genero.SelectedValue;
                 medimodf.usu_correo = txt_email.Text;
@@ -153,24 +157,49 @@ namespace Pry_Agendamiento_Citas.Template
 
         protected void btn_Save_Med_Click(object sender, EventArgs e)
         {
-            lbl_mensaje.Visible = false;
-            bool existe = Doctor_Log.autentificar_medi(txt_Aps_Noms.Text);
+            if (string.IsNullOrEmpty(txt_Aps_Noms.Text) || string.IsNullOrEmpty(txt_Edad.Text) || string.IsNullOrEmpty(txt_cedula.Text) ||
+                string.IsNullOrEmpty(txt_telef.Text) || string.IsNullOrEmpty(txt_User.Text) || string.IsNullOrEmpty(txt_passw.Text) || string.IsNullOrEmpty(txt_email.Text))
             {
-                if (existe)
-                {
-                    Tbl_Usuario medi = new Tbl_Usuario();
-                    medi = Doctor_Log.obtener_medi_xnom(txt_Aps_Noms.Text);
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Llenar todos los Campos!!";
+            }
+            else if (ddl_genero.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Genero";
+            }
+            else if (ddl_grup_sangre.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Grupo Sanguineo";
+            }
+            else if (ddl_especialidad.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar una Especialidad";
+            }
+            else
+            {
 
-                    if (medi != null)
-                    {
-                        lbl_mensaje.Visible = true;
-                        lbl_mensaje.Text = "Paciente Existente...";
-                    }
-                }
-                else
+                lbl_mensaje.Visible = false;
+                bool existe = Doctor_Log.autentificar_medi(txt_Aps_Noms.Text);
                 {
-                    lbl_mensaje.Visible = false;
-                    guardar_modificar_datos_med(Convert.ToInt32(Request["cod"]));
+                    if (existe)
+                    {
+                        Tbl_Usuario medi = new Tbl_Usuario();
+                        medi = Doctor_Log.obtener_medi_xnom(txt_Aps_Noms.Text);
+
+                        if (medi != null)
+                        {
+                            lbl_mensaje.Visible = true;
+                            lbl_mensaje.Text = "Doctor Existente...";
+                        }
+                    }
+                    else
+                    {
+                        lbl_mensaje.Visible = false;
+                        guardar_modificar_datos_med(Convert.ToInt32(Request["cod"]));
+                    }
                 }
             }
         }

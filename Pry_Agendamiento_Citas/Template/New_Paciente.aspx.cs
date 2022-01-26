@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -48,6 +49,7 @@ namespace Pry_Agendamiento_Citas.Template
                         txt_cedula.Text = pacieInfo.usu_cedula.ToString();
                         txt_telef.Text = pacieInfo.usu_telefono.ToString();
                         txt_User.Text = pacieInfo.usu_nomLogin.ToString();
+                        txt_passw.Text = pacieInfo.usu_contrasenia.ToString();
 
                         ddl_genero.SelectedValue = pacieInfo.usu_genero.ToString();
                         ddl_grup_sangre.SelectedValue = pacieInfo.usu_grupo_sanguineo.ToString();
@@ -66,11 +68,13 @@ namespace Pry_Agendamiento_Citas.Template
                 lbl_mensaje.Text = "";
                 pacieInfo = new Tbl_Usuario();
 
-                pacieInfo.usu_apellido_nombre = txt_Aps_Noms.Text;  //No se esta Guardando
+                pacieInfo.usu_apellido_nombre = txt_Aps_Noms.Text;
                 pacieInfo.usu_edad = Convert.ToInt32(txt_Edad.Text);
-                pacieInfo.usu_cedula = Convert.ToInt32(txt_cedula.Text);
+                pacieInfo.usu_cedula = txt_cedula.Text;
                 pacieInfo.usu_telefono = txt_telef.Text;
                 pacieInfo.usu_nomLogin = txt_User.Text;
+                pacieInfo.usu_contrasenia = txt_passw.Text;
+
                 pacieInfo.usu_grupo_sanguineo = Convert.ToInt32(ddl_grup_sangre.SelectedValue);
                 pacieInfo.usu_genero = ddl_genero.SelectedValue;
                 pacieInfo.usu_correo = txt_email.Text;
@@ -95,9 +99,11 @@ namespace Pry_Agendamiento_Citas.Template
 
                 pacimodf.usu_apellido_nombre = txt_Aps_Noms.Text;
                 pacimodf.usu_edad = Convert.ToInt32(txt_Edad.Text);
-                pacimodf.usu_cedula = Convert.ToInt32(txt_cedula.Text);
+                pacimodf.usu_cedula = txt_cedula.Text;
                 pacimodf.usu_telefono = txt_telef.Text;
                 pacimodf.usu_nomLogin = txt_User.Text;
+                pacimodf.usu_contrasenia = txt_passw.Text;
+
                 pacimodf.usu_grupo_sanguineo = Convert.ToInt32(ddl_grup_sangre.SelectedValue);
                 pacimodf.usu_genero = ddl_genero.SelectedValue;
                 pacimodf.usu_correo = txt_email.Text;
@@ -133,27 +139,46 @@ namespace Pry_Agendamiento_Citas.Template
 
         protected void btn_Save_Pac_Click(object sender, EventArgs e)
         {
-            lbl_mensaje.Visible = false;
-            bool existe = Paciente_Log.autentificar_paci(txt_Aps_Noms.Text);
+            if (string.IsNullOrEmpty(txt_Aps_Noms.Text) || string.IsNullOrEmpty(txt_Edad.Text) || string.IsNullOrEmpty(txt_cedula.Text) ||
+                string.IsNullOrEmpty(txt_telef.Text) || string.IsNullOrEmpty(txt_User.Text) || string.IsNullOrEmpty(txt_passw.Text) || string.IsNullOrEmpty(txt_email.Text))
             {
-                if (existe)
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Llenar todos los Campos!!";
+            }
+            else if (ddl_genero.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Genero";
+            }
+            else if (ddl_grup_sangre.SelectedIndex == 0)
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar un Grupo Sanguineo";
+            }
+            else
+            {
+                lbl_mensaje.Visible = false;
+                bool existe = Paciente_Log.autentificar_paci(txt_Aps_Noms.Text);
                 {
-                    Tbl_Usuario paci = new Tbl_Usuario();
-                    paci = Paciente_Log.obtener_pac_xnom(txt_Aps_Noms.Text);
-
-                    if (paci != null)
+                    if (existe)
                     {
-                        lbl_mensaje.Visible = true;
-                        lbl_mensaje.Text = "Paciente Existente...";
+                        Tbl_Usuario paci = new Tbl_Usuario();
+                        paci = Paciente_Log.obtener_pac_xnom(txt_Aps_Noms.Text);
+
+                        if (paci != null)
+                        {
+                            lbl_mensaje.Visible = true;
+                            lbl_mensaje.Text = "Paciente Existente...";
+                        }
+                    }
+                    else
+                    {
+                        lbl_mensaje.Visible = false;
+                        guardar_modificar_datos_paci(Convert.ToInt32(Request["cod"]));
                     }
                 }
-                else
-                {
-                    lbl_mensaje.Visible = false;
-                    guardar_modificar_datos_paci(Convert.ToInt32(Request["cod"]));
-                }
             }
-            
+
         }
 
         protected void btn_Modify_Pac_Click(object sender, EventArgs e)

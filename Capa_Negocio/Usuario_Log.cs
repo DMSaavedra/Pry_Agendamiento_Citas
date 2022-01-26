@@ -53,9 +53,9 @@ namespace Capa_Negocio
         }
 
         //Verificacion de Credenciales
-        public static bool autentificar(string user, string cedula)
+        public static bool autentificar(string user, string password)
         {
-            var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == 'A' && usu.usu_nomLogin.Equals(user) && usu.usu_cedula.Equals(cedula));
+            var auto = dc.Tbl_Usuario.Any(usu => usu.usu_estado == 'A' && usu.usu_nomLogin.Equals(user) && usu.usu_contrasenia.Equals(password));
             return auto;
         }
 
@@ -82,9 +82,9 @@ namespace Capa_Negocio
 
 
         //Obtener Informacion por las credenciales
-        public static Tbl_Usuario autentificarXlogin(string user, string cedula)
+        public static Tbl_Usuario autentificarXlogin(string user, string password)
         {
-            var nlogin = dc.Tbl_Usuario.Single(usu => usu.usu_estado == 'A' & usu.usu_nomLogin.Equals(user) & usu.usu_cedula.Equals(cedula));
+            var nlogin = dc.Tbl_Usuario.Single(usu => usu.usu_estado == 'A' & usu.usu_nomLogin.Equals(user) & usu.usu_contrasenia.Equals(password));
             return nlogin;
         }
 

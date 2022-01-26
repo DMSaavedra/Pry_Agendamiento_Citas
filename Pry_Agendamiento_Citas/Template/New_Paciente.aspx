@@ -25,38 +25,42 @@
                 <div class="form row">
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">Apellidos y Nombres<span class="m-0 font-weight-bold text-danger">*</span></label>
-                        <asp:TextBox ID="txt_Aps_Noms" runat="server" CssClass="form-control" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
+                        <asp:TextBox ID="txt_Aps_Noms" runat="server" CssClass="form-control" onKeypress="if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122)) event.returnValue = false;" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"></asp:TextBox>
                     </div>
                     <div class="col-md-2 mb-3">
                         <label for="validationCustom01">Edad<span class="m-0 font-weight-bold text-danger">*</span></label>
-                        <asp:TextBox ID="txt_Edad" runat="server" CssClass="form-control" TextMode="Number">0</asp:TextBox>
+                        <asp:TextBox ID="txt_Edad" runat="server" CssClass="form-control" MaxLength="2" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
                     </div>
-                    <div class="col-md-2 mb-3">
-                        <label for="validationCustom01">Cedula/RUC</label>
-                        <asp:TextBox ID="txt_cedula" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Cedula</label>
+                        <asp:TextBox ID="txt_cedula" runat="server" CssClass="form-control" MaxLength="10" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
                     </div>
                     <div class="col-md-2 mb-3">
                         <label for="validationCustom01">Celular/Telefono</label>
-                        <asp:TextBox ID="txt_telef" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="col-md-2 mb-3">
-                        <label for="validationCustom01">Usuario</label>
-                        <asp:TextBox ID="txt_User" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txt_telef" runat="server" CssClass="form-control" MaxLength="10" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
                     </div>
                 </div>
                 <br>
                 <div class="form row">
                     <div class="col-md-2 mb-3">
+                        <label for="validationCustom01">Usuario</label>
+                        <asp:TextBox ID="txt_User" runat="server" CssClass="form-control" MaxLength="10" onKeypress="if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122)) event.returnValue = false;"></asp:TextBox>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label for="validationCustom01">Contraseña</label>
+                        <asp:TextBox ID="txt_passw" runat="server" CssClass="form-control" MaxLength="6" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
+                    </div>
+                    <div class="col-md-2 mb-3">
                         <label for="validationCustom01">Genero</label>
-                        <asp:DropDownList ID="ddl_genero" runat="server" class="form-control">
-                            <asp:ListItem>Selccione</asp:ListItem>
+                        <asp:DropDownList ID="ddl_genero" runat="server" class="form-control" style="height: 1.2cm;">
+                            <asp:ListItem Value="0">Selccione</asp:ListItem>
                             <asp:ListItem Value="M">MASCULINO</asp:ListItem>
                             <asp:ListItem Value="F">FEMENINO</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                     <div class="col-md-2 mb-3">
                         <label for="validationCustom01">Grupo Sanguineo</label>
-                        <asp:DropDownList ID="ddl_grup_sangre" runat="server" class="form-control">
+                        <asp:DropDownList ID="ddl_grup_sangre" runat="server" class="form-control" style="height: 1.2cm;">
                             <asp:ListItem>Selccione</asp:ListItem>
                             <asp:ListItem Value="1">O+</asp:ListItem>
                             <asp:ListItem Value="2">O-</asp:ListItem>
@@ -64,7 +68,7 @@
                             <asp:ListItem Value="3">AB-</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <div class="col-md-5 mb-3">
+                    <div class="col-md-4 mb-3">
                         <label>Correo Electronico<span class="m-0 font-weight-bold text-danger">*</span></label>
                         <asp:TextBox ID="txt_email" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
                     </div>

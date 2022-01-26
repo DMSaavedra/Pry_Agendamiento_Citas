@@ -30,14 +30,15 @@
                         </center>
                         <label class="form-label-wrapper">
                             <asp:Label ID="Label3" runat="server" Text="Usuario"></asp:Label>
-
-                            <%--                            <p class="form-label">Usuario</p>--%>
-                            <asp:TextBox ID="txt_usuario" class="form-input" placeholder="Ingrese su usuario" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_usuario" MaxLength="10" class="form-input" placeholder="Ingrese su Usuario" runat="server" onKeypress="if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122)) event.returnValue = false;"></asp:TextBox>
                         </label>
                         <label class="form-label-wrapper">
-                            <asp:Label ID="Label2" runat="server" Text="Cedula"></asp:Label>
-                            <%--                            <p class="form-label">Cedula</p>--%>
-                            <asp:TextBox ID="txt_password" class="form-input" placeholder="Ingrese su numero de Cedula" TextMode="Password" runat="server"></asp:TextBox>
+                            <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
+                            <asp:TextBox ID="txt_password" MaxLength="6" class="form-input" placeholder="Ingrese su Contraseña" TextMode="Password" runat="server" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
+                        </label>
+                        <label class="form-label-wrapper">
+                            <asp:Label ID="Label4" runat="server" Text="Cedula" Visible="false"></asp:Label>
+                            <asp:TextBox ID="txt_cedula" MaxLength="10" class="form-input" Visible="false" placeholder="Ingrese su numero de Cedula" runat="server" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"></asp:TextBox>
                         </label>
                         <asp:Button ID="btn_ingresar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Ingresar" OnClick="btn_ingresar_Click" />
                         <asp:Button ID="btn_recuperar" class="form-btn primary-default-btn transparent-btn" runat="server" Text="Recuperar" OnClick="btn_recuperar_Click" Visible="false" />
@@ -51,7 +52,9 @@
                         <br />
                         <center>
                             <asp:Label ID="Label1" runat="server" Text="Intentos :"></asp:Label>
-                            <asp:Label ID="lbl_intentos" runat="server" Text=""></asp:Label>
+                            <b>
+                                <asp:Label ID="lbl_intentos" runat="server" Text=""></asp:Label>
+                            </b>
                         </center>
                     </ContentTemplate>
                 </asp:UpdatePanel>
