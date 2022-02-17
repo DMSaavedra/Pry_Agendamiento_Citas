@@ -135,9 +135,9 @@
                             <li>
                                 <asp:LinkButton ID="lnk_consultorio" runat="server" OnClick="lnk_consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nuevo Consultorio</asp:LinkButton>
                             </li>
-                            <li>
+                            <%--<li>
                                 <asp:LinkButton ID="lnk_List_Consultorio" runat="server" OnClick="lnk_List_Consultorio_Click"><span class="fa fa-arrow-right">&nbsp;</span> Listado Consultorio</asp:LinkButton>
-                            </li>
+                            </li>--%>
 
                         </ul>
                     </li>

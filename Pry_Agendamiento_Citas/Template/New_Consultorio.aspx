@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-4 mb-3">
                 <label>Imagen</label>
-                <asp:FileUpload ID="ful_imagen" runat="server" class="form-control form-control-sm" />
+                <asp:FileUpload ID="ful_imagen" accept=".jpg" runat="server" CssClass="form-control form-control-sm" />
             </div>
         </div>
         <br />
@@ -32,4 +32,43 @@
 
         <asp:Button ID="btn_Modify_Consul" runat="server" Text="Modificar" CssClass="btn btn-warning" Width="230px" OnClick="btn_Modify_Consul_Click" Visible="false" />
     </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Listado de Imagenes de Consultorios
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <asp:Repeater ID="Repeater1" runat="server">
+                            <ItemTemplate>
+                                <div class="col-md-4">
+                                    <img class="img-responsive" src="data:image/jpg;base64,<%# Convert.ToBase64String((byte[])DataBinder.Eval(Container.DataItem, "cons_imagen")) %>" />
+                                    Num Consultorio: <b><%# DataBinder.Eval(Container.DataItem, "cons_numero") %></b>
+<%--                                    <asp:ImageButton ID="img_eliminar" runat="server" ImageUrl="~/Template/Assets/imagenes/eliminar.gif" CommandArgument='<%#Eval("cons_id") %>' CommandName="Eliminar" OnClientClick="return confirm('Esta Seguro de Eliminar el Registro?')" />--%>
+
+                                    <br />
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <%--<center>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>--%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
+

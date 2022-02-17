@@ -375,7 +375,7 @@ namespace Capa_Datos
 		
 		private string _cons_numero;
 		
-		private string _cons_imagen;
+		private System.Data.Linq.Binary _cons_imagen;
 		
 		private System.Nullable<char> _cons_estado;
 		
@@ -389,7 +389,7 @@ namespace Capa_Datos
     partial void Oncons_idChanged();
     partial void Oncons_numeroChanging(string value);
     partial void Oncons_numeroChanged();
-    partial void Oncons_imagenChanging(string value);
+    partial void Oncons_imagenChanging(System.Data.Linq.Binary value);
     partial void Oncons_imagenChanged();
     partial void Oncons_estadoChanging(System.Nullable<char> value);
     partial void Oncons_estadoChanged();
@@ -441,8 +441,8 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cons_imagen", DbType="VarChar(100)")]
-		public string cons_imagen
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cons_imagen", DbType="Image", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary cons_imagen
 		{
 			get
 			{

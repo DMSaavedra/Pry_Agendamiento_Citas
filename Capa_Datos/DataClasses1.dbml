@@ -16,7 +16,7 @@
     <Type Name="Tbl_Consultorio">
       <Column Name="cons_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="cons_numero" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="cons_imagen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cons_imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="cons_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Association Name="Tbl_Consultorio_Tbl_Especialidad" Member="Tbl_Especialidad" ThisKey="cons_id" OtherKey="cons_id" Type="Tbl_Especialidad" />
     </Type>
