@@ -45,6 +45,7 @@
     <Compile Include="Agendamiento_Log.cs" />
     <Compile Include="Consultorio_Log.cs" />
     <Compile Include="Doctor_Log.cs" />
+    <Compile Include="EmailCitaAgn.cs" />
     <Compile Include="EmailRecuperacion.cs" />
     <Compile Include="Especialidad_Log.cs" />
     <Compile Include="Paciente_Log.cs" />

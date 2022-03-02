@@ -52,6 +52,12 @@ namespace Capa_Negocio
             return usuid;
         }
 
+        public static Tbl_Consultorio obtener_cons_xid(string id)
+        {
+            var consid = dc.Tbl_Consultorio.FirstOrDefault(cons => cons.cons_id.Equals(id) && cons.cons_estado == 'A');
+            return consid;
+        }
+
         //Verificacion de Credenciales
         public static bool autentificar(string user, string password)
         {

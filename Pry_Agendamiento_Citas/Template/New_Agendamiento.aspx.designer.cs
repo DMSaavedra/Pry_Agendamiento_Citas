@@ -24,6 +24,24 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Label lbl_nombre;
 
         /// <summary>
+        /// Control ScriptManager1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
+        /// Control UpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+
+        /// <summary>
         /// Control lbl_mensaje.
         /// </summary>
         /// <remarks>
@@ -31,6 +49,15 @@ namespace Pry_Agendamiento_Citas.Template
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_mensaje;
+
+        /// <summary>
+        /// Control lbl_mensajeDos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_mensajeDos;
 
         /// <summary>
         /// Control ddl_pacientes.
@@ -96,12 +123,12 @@ namespace Pry_Agendamiento_Citas.Template
         protected global::System.Web.UI.WebControls.Button btn_Modify_Agen;
 
         /// <summary>
-        /// Control btn_enviarc.
+        /// Control btn_Limpiar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_enviarc;
+        protected global::System.Web.UI.WebControls.Button btn_Limpiar;
     }
 }

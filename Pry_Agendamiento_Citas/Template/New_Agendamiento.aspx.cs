@@ -107,10 +107,13 @@ namespace Pry_Agendamiento_Citas.Template
                 citaInfo.cagn_paciente = ddl_pacientes.SelectedValue;
                 citaInfo.cagn_doctor = (ddl_nom_doc.SelectedValue);
                 citaInfo.cagn_fechaAgen = Convert.ToDateTime(txt_fechaRT.Text);
-                //citaInfo.cagn_horaAgen = TimeSpan(txt_horaRT.Text);
+                citaInfo.cagn_horaAgen = txt_horaRT.Text;
                 citaInfo.espc_id = Convert.ToInt32(ddl_Especialidad.SelectedValue);
 
                 Agendamiento_Log.saveAgen(citaInfo);
+
+                //Envio Correo
+                enviarCita();
 
                 lbl_mensaje.Visible = true;
                 lbl_mensaje.Text = "Los Datos han sido GUARDADOS";
@@ -119,6 +122,39 @@ namespace Pry_Agendamiento_Citas.Template
             {
                 lbl_mensaje.Visible = true;
                 lbl_mensaje.Text = "Los Datos NO se han guardado! NewP";
+            }
+        }
+
+        private void enviarCita()
+        {
+            Tbl_Usuario usu = new Tbl_Usuario();
+            usu = Usuario_Log.obtener_usu_xnom(ddl_pacientes.SelectedValue);
+
+            Tbl_Consultorio consul = new Tbl_Consultorio();
+            consul = Usuario_Log.obtener_cons_xid(ddl_Especialidad.SelectedValue);
+
+
+            string from = "asistenciatecnica067@gmail.com";
+            string pass = "ansii12345@@";
+            string to = "saavedratony752@gmail.com"; //usu.usu_correo;
+            string sms = "DATOS DE CITA AGENDADA \n Apellido y Nombre: " + usu.usu_apellido_nombre +
+                         "\n Identificacion: " + usu.usu_cedula +
+                         "\n Edad: " + usu.usu_edad +
+                         "\n Genero: " + usu.usu_genero +
+                         "\n Se ha Agendado una cita para el Dia: " + txt_fechaRT.Text + " y hora: " + txt_horaRT.Text +
+                         "\n Con El/La Doctor: " + ddl_nom_doc.SelectedValue + ".\n En el Consultorio Número: " + consul.cons_numero +
+                         "\n En la Especialidad: " + ddl_Especialidad.SelectedValue +
+                         "\n\n\n Se Recomienda estar 10 minutos antes para la Validacion de Turno y toma de Signos Vitales. \n Gracias";
+
+            if (new EmailCitaAgn().enviarcorreo(from, pass, to, sms))
+            {
+                lbl_mensajeDos.ForeColor = Color.Green;
+                lbl_mensajeDos.Text = "Correo Enviado con EXITO";
+            }
+            else
+            {
+                lbl_mensajeDos.ForeColor = Color.Red;
+                lbl_mensajeDos.Text = "NO ENVIADO!!!";
             }
         }
 
@@ -131,6 +167,7 @@ namespace Pry_Agendamiento_Citas.Template
                 agenmodf.cagn_paciente = ddl_pacientes.SelectedValue;
                 agenmodf.cagn_doctor = ddl_nom_doc.SelectedValue;
                 agenmodf.cagn_fechaAgen = Convert.ToDateTime(txt_fechaRT.Text);
+                agenmodf.cagn_horaAgen = txt_horaRT.Text;
                 agenmodf.espc_id = Convert.ToInt32(ddl_Especialidad.SelectedValue);
 
                 Agendamiento_Log.modifyAgen(agenmodf);
@@ -180,6 +217,16 @@ namespace Pry_Agendamiento_Citas.Template
                 lbl_mensaje.ForeColor = Color.OrangeRed;
                 lbl_mensaje.Text = "Debe Seleccionar una Especialidad";
             }
+            else if (txt_horaRT.Text == "" || txt_horaRT.Text == " ")
+            {
+                lbl_mensaje.ForeColor = Color.OrangeRed;
+                lbl_mensaje.Text = "Debe Seleccionar una Hora";
+            }
+            //else if (txt_horaRT.Text <= "07:00")
+            //{
+            //    lbl_mensaje.ForeColor = Color.OrangeRed;
+            //    lbl_mensaje.Text = "Debe Seleccionar una Hora entre las 08:00 y las 17:00";
+            //}
             else
             {
                 lbl_mensaje.Visible = false;
@@ -188,11 +235,13 @@ namespace Pry_Agendamiento_Citas.Template
                     if (existe)
                     {
                         Tbl_Cita_Agendada paci = new Tbl_Cita_Agendada();
-                        paci = Agendamiento_Log.obtener_agen_xnom(ddl_pacientes.SelectedValue);
+                        paci = Agendamiento_Log.obtener_agen_xfechahora(txt_fechaRT.Text, txt_horaRT.Text);
+                        //paci = Agendamiento_Log.obtener_agen_xnom(ddl_pacientes.SelectedValue);
 
                         if (paci != null)
                         {
                             lbl_mensaje.Visible = true;
+                            lbl_mensaje.ForeColor = Color.Red;
                             lbl_mensaje.Text = "Agendamiento Existente...";
                         }
                     }
@@ -201,6 +250,9 @@ namespace Pry_Agendamiento_Citas.Template
                         lbl_mensaje.Visible = false;
                         guardar_modificar_datos_agen(Convert.ToInt32(Request["cod"]));
                     }
+
+                    //lbl_mensaje.Visible = false;
+                    //guardar_modificar_datos_agen(Convert.ToInt32(Request["cod"]));
                 }
             }
         }
@@ -210,9 +262,11 @@ namespace Pry_Agendamiento_Citas.Template
             guardar_modificar_datos_agen(Convert.ToInt32(Request["cod"]));
         }
 
-        protected void btn_enviarc_Click(object sender, EventArgs e)
+        protected void btn_Limpiar_Click(object sender, EventArgs e)
         {
-
+            lbl_mensaje.Text = "";
+            lbl_mensaje.ForeColor = Color.Green;
+            lbl_mensajeDos.Text = "";
         }
     }
 }

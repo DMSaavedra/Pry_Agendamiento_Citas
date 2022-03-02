@@ -132,7 +132,7 @@ namespace Capa_Datos
 		
 		private System.Nullable<System.DateTime> _cagn_fechaAgen;
 		
-		private System.Nullable<System.TimeSpan> _cagn_horaAgen;
+		private string _cagn_horaAgen;
 		
 		private System.Nullable<char> _cagn_estado;
 		
@@ -152,7 +152,7 @@ namespace Capa_Datos
     partial void Oncagn_doctorChanged();
     partial void Oncagn_fechaAgenChanging(System.Nullable<System.DateTime> value);
     partial void Oncagn_fechaAgenChanged();
-    partial void Oncagn_horaAgenChanging(System.Nullable<System.TimeSpan> value);
+    partial void Oncagn_horaAgenChanging(string value);
     partial void Oncagn_horaAgenChanged();
     partial void Oncagn_estadoChanging(System.Nullable<char> value);
     partial void Oncagn_estadoChanged();
@@ -246,8 +246,8 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_horaAgen", DbType="Time")]
-		public System.Nullable<System.TimeSpan> cagn_horaAgen
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cagn_horaAgen", DbType="VarChar(50)")]
+		public string cagn_horaAgen
 		{
 			get
 			{
@@ -441,7 +441,7 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cons_imagen", DbType="Image", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cons_imagen", DbType="Image", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary cons_imagen
 		{
 			get

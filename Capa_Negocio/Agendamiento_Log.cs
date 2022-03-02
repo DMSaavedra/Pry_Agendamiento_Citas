@@ -84,6 +84,11 @@ namespace Capa_Negocio
             return agenId;
         }
 
+        public static Tbl_Cita_Agendada obtener_agen_xfechahora(string fecha, string hora)
+        {
+            var agenId = dc.Tbl_Cita_Agendada.FirstOrDefault(agen => agen.cagn_fechaAgen.Equals(fecha) && agen.cagn_horaAgen.Equals(hora) && agen.cagn_estado == 'A');
+            return agenId;
+        }
         public static List<Tbl_Cita_Agendada> obtener_agendamiento()
         {
             var lista = dc.Tbl_Cita_Agendada.Where(age => age.cagn_estado == 'A' );
