@@ -95,8 +95,28 @@ namespace Capa_Negocio
             return lista.ToList();
         }
 
+        //Citas por Paciente
+        public static Tbl_Cita_Agendada obtener_agendamiento_xnom(string nombre)
+        {
+            var citxnom = dc.Tbl_Cita_Agendada.FirstOrDefault(age => age.cagn_paciente.Equals(nombre) && age.cagn_estado == 'A');
+            return citxnom;
+        }
+
+        //Citas por Medico
+        public static Tbl_Cita_Agendada obtener_agendamiento_xmed(string medc)
+        {
+            var citxnom = dc.Tbl_Cita_Agendada.FirstOrDefault(age => age.cagn_doctor.Equals(medc) && age.cagn_estado == 'A');
+            return citxnom;
+        }
+
+        //Citas por Especialidad
+        public static Tbl_Cita_Agendada obtener_agendamiento_xespec(string espec)
+        {
+            var citxnom = dc.Tbl_Cita_Agendada.FirstOrDefault(age => age.espc_id.Equals(espec) && age.cagn_estado == 'A');
+            return citxnom;
+        }
         //Lista de Citas con Fecha del Dia
-        
+
         public static List<Tbl_Cita_Agendada> obtener_citasXfecha(DateTime fecha)
         {
             var lista = dc.Tbl_Cita_Agendada.Where(age => age.cagn_estado == 'A' && age.cagn_fechaAgen.Equals(fecha));

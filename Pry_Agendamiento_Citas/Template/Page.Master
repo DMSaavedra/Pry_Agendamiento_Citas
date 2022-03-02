@@ -174,11 +174,11 @@
                             <li>
                                 <asp:LinkButton ID="lnk_Agendamiento_Doc" runat="server" OnClick="lnk_Agendamiento_Doc_Click"><span class="fa fa-arrow-right">&nbsp;</span> Nueva Cita</asp:LinkButton>
                             </li>
-                            <li>
+                            <%--<li>
                                 <a class="" href="#">
                                     <span class="fa fa-arrow-right">&nbsp;</span> Citas Agendadas
                                 </a>
-                            </li>
+                            </li>--%>
 
                         </ul>
                     </li>
@@ -187,7 +187,7 @@
             <asp:Panel ID="Panel3" Visible="false" runat="server">
                 <ul class="nav menu">
                     <li>
-                        <asp:LinkButton ID="lnk_historial_med" runat="server"><i class="fas fa-notes-medical"></i>&nbsp; Historial de Citas</asp:LinkButton>
+                        <asp:LinkButton ID="lnk_historial_med" runat="server" OnClick="lnk_historial_med_Click"><i class="fas fa-notes-medical"></i>&nbsp; Historial de Citas</asp:LinkButton>
                     </li>
                 </ul>
             </asp:Panel>

@@ -108,5 +108,10 @@ namespace Pry_Agendamiento_Citas.Template
         {
             Response.Redirect("~/Template/Dashboard.aspx");
         }
+
+        protected void lnk_historial_med_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/HistorialMed.aspx");
+        }
     }
 }
